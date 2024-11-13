@@ -8,8 +8,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        nav_t_Color: "#1470AF",
+        body_t_Color: "#000000",
+        global_bg: "#EAEAEE"
+      },
+      transformOrigin: {
+        "center":"center",
+      },
+      fontFamily: {
+        instruItalic: ['var(--font-instru-regular)', 'serif'],
+        instruRegular: ['var(--font-instru-italic)', 'serif'],
       },
     },
   },
