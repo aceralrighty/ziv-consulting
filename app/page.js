@@ -1,9 +1,13 @@
 "use client"
 
-import { useState } from "react";
+import {useState} from "react";
 import MyHead from "../app/headshot";
 import Experience from "../app/experience";
-import { MenuIcon, XIcon } from "@heroicons/react/solid";
+import Education from "../app/education";
+import Languages from "../app/languages";
+import Award from "../app/awards";
+import Form from "../app/form";
+import {MenuIcon, XIcon} from "@heroicons/react/solid";
 
 export default function Home() {
     const [hovered, setHovered] = useState(false);
@@ -12,7 +16,7 @@ export default function Home() {
 
     return (
         <>
-            {/* Full-screen overlay for gray background */}
+
             {menuOpen && (
                 <div className="fixed inset-0 bg-gray-950 opacity-95 transition-opacity duration-300 z-10"></div>
             )}
@@ -25,9 +29,9 @@ export default function Home() {
                 <div className="md:hidden flex items-center">
                     <button onClick={() => setMenuOpen(!menuOpen)}>
                         {menuOpen ? (
-                            <XIcon className="h-8 w-8 text-nav_t_Color"/>
+                            <XIcon className="h-8 w-8 text-nav_t_Color" />
                         ) : (
-                            <MenuIcon className="h-8 w-8 text-nav_t_Color"/>
+                            <MenuIcon className="h-8 w-8 text-nav_t_Color" />
                         )}
                     </button>
                 </div>
@@ -39,8 +43,8 @@ export default function Home() {
                 >
                     <a
                         href="#"
-                        className={`mr-4 text-nav_t_Color text-2xl ${
-                            hovered ? "drop-shadow-lg" : ""
+                        className={`mr-4 text-nav_t_Color text-2xl transition-all duration-300 ${
+                            hovered ? "drop-shadow-lg scale-105" : "scale-100"
                         }`}
                         onMouseEnter={() => setHovered(true)}
                         onMouseLeave={() => setHovered(false)}
@@ -49,8 +53,8 @@ export default function Home() {
                     </a>
                     <a
                         href="#"
-                        className={`mr-4 text-nav_t_Color text-2xl ${
-                            hoveredContact ? "drop-shadow-lg" : ""
+                        className={`mr-4 text-nav_t_Color text-2xl transition-all duration-300 ${
+                            hoveredContact ? "drop-shadow-lg scale-105" : "scale-100"
                         }`}
                         onMouseEnter={() => setHoveredContact(true)}
                         onMouseLeave={() => setHoveredContact(false)}
@@ -62,6 +66,10 @@ export default function Home() {
 
             <MyHead/>
             <Experience/>
+            <Education/>
+            <Award/>
+            <Languages/>
+            <Form/>
         </>
     );
 }

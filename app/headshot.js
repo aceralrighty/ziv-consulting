@@ -1,4 +1,5 @@
-"use client"
+"use client";
+import { useState } from "react";
 import HeadshotImg from "/public/headshot.JPG";
 import Image from "next/image";
 
@@ -17,13 +18,55 @@ const accomplishments = [
     }
 ];
 
-
 export default function MyHead() {
+    const [shadowStyle, setShadowStyle] = useState({});
+
+    const handleInteraction = (x, y, width, height) => {
+        const maxOffset = 15;
+        const shadowX = (x / (width / 2)) * maxOffset;
+        const shadowY = (y / (height / 2)) * maxOffset;
+        setShadowStyle({
+            boxShadow: `${shadowX}px ${shadowY}px 20px rgba(0, 0, 0, 0.3)`,
+        });
+    };
+
+    const handleMouseMove = (e) => {
+        const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+        const x = e.clientX - left - width / 2;
+        const y = e.clientY - top - height / 2;
+        handleInteraction(x, y, width, height);
+    };
+
+    const handleTouchStart = (e) => {
+        const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+        const touch = e.touches[0];
+        const x = touch.clientX - left - width / 2;
+        const y = touch.clientY - top - height / 2;
+        handleInteraction(x, y, width, height);
+    };
+
+    const handleInteractionEnd = () => {
+        setShadowStyle({ boxShadow: "0 0 25px rgba(0, 0, 0, 0.5)" });
+    };
+
     return (
         <div className="flex flex-col items-center mt-16 space-y-4">
-            <div className="w-48 h-48 rounded-full overflow-hidden">
-                <Image src={HeadshotImg} alt="headshot" width={192} height={192} objectFit="cover"
-                       className="rounded-full"/>
+            <div
+                className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-2xl"
+                style={shadowStyle}
+                onMouseMove={handleMouseMove}
+                onMouseLeave={handleInteractionEnd}
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleInteractionEnd}
+            >
+                <Image
+                    src={HeadshotImg}
+                    alt="headshot"
+                    width={320}
+                    height={320}
+                    objectFit="cover"
+                    className="rounded-full"
+                />
             </div>
             <div className="w-3/4 md:w-1/2 bg-gray-100 p-6 rounded-lg shadow-md text-gray-800">
                 <p className="text-lg leading-relaxed font-light text-left">
@@ -56,4 +99,3 @@ export default function MyHead() {
         </div>
     );
 }
-
