@@ -1,4 +1,4 @@
-import Army from "../public/Military.png";
+import Army from "/public/Military.png";
 import Image from "next/image";
 
 const experience = [
