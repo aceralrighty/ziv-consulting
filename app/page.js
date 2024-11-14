@@ -1,12 +1,12 @@
 "use client"
 
 import {useState} from "react";
-import MyHead from "../app/headshot";
-import Experience from "../app/experience";
-import Education from "../app/education";
-import Languages from "../app/languages";
-import Award from "../app/awards";
-import Form from "../app/form";
+import MyHead from "./components/headshot";
+import Experience from "./components/experience";
+import Education from "./components/education";
+import Languages from "./components/languages";
+import Award from "./components/awards";
+import Form from "./components/form";
 import {MenuIcon, XIcon} from "@heroicons/react/solid";
 
 export default function Home() {
