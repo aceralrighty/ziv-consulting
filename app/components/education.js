@@ -1,5 +1,5 @@
 import Image from "next/image";
-import school from "../public/indian_hills_community_college_logo.jpeg"
+import school from "/public/indian_hills_community_college_logo.jpeg"
 
 export default function Education() {
     return (
