@@ -12,7 +12,7 @@ const experience = [
     {
         title: "Assembly Operator",
         company: "Ashley Furniture Industries",
-        length: "Nov 2021 - May 2023",
+        length: "Nov 2021 - March 2023",
         where: " Mesquite, Texas ",
         duties: " Collaborated with an eight-person team in a fast-paced environment to construct high-end furniture, ensuring meticulous attention to detail and exceptional quality."
     },

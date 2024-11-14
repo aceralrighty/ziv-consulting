@@ -7,6 +7,7 @@ import Education from "./components/education";
 import Languages from "./components/languages";
 import Award from "./components/awards";
 import Form from "./components/form";
+import Footer from "./components/footer";
 import {MenuIcon, XIcon} from "@heroicons/react/solid";
 
 export default function Home() {
@@ -70,6 +71,7 @@ export default function Home() {
             <Award/>
             <Languages/>
             <Form/>
+            <Footer/>
         </>
     );
 }
