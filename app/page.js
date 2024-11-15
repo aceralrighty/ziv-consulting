@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
 import MyHead from "./components/headshot";
 import Experience from "./components/experience";
 import Education from "./components/education";
@@ -9,7 +9,10 @@ import Award from "./components/awards";
 import Form from "./components/form";
 import Projects from "./components/projects";
 import Footer from "./components/footer";
-import { MenuIcon, XIcon, SunIcon, MoonIcon } from "@heroicons/react/solid";
+import Code from "./components/code_lang";
+import Tools from "./components/tools";
+import Framwork from "./components/frameworks";
+import {MenuIcon, XIcon, SunIcon, MoonIcon} from "@heroicons/react/solid";
 
 export default function Home() {
     const [hovered, setHovered] = useState(false);
@@ -26,29 +29,32 @@ export default function Home() {
     }, [darkMode]);
 
     return (
-        <div className={`bg-global_bg ${darkMode ? 'dark:bg-global_bg_dark' : ''} dark:text-body_t_color-dark text-body_t_Color`}>
+        <div
+            className={`bg-global_bg ${darkMode ? 'dark:bg-global_bg_dark' : ''} dark:text-body_t_color-dark text-body_t_Color`}>
 
             {menuOpen && (
-                <div className="fixed inset-0 bg-global_bg dark:bg-global_bg_dark opacity-95 transition-opacity duration-300 z-10"></div>
+                <div
+                    className="fixed inset-0 bg-global_bg dark:bg-global_bg_dark opacity-95 transition-opacity duration-300 z-10"></div>
             )}
 
             <nav className="relative z-20 flex items-center justify-between px-4 mt-4">
-                {/* Site title */}
+
                 <div className="font-instruItalic px-4">
                     <p className="text-nav_t_Color dark:text-nav_t_color-dark text-2xl">Ziv Consulting</p>
                 </div>
 
                 <div className="md:hidden flex items-center space-x-4">
 
-                    <button onClick={() => setDarkMode(!darkMode)} className="text-nav_t_Color dark:text-nav_t_color-dark">
-                        {darkMode ? <SunIcon className="h-6 w-6" /> : <MoonIcon className="h-6 w-6" />}
+                    <button onClick={() => setDarkMode(!darkMode)}
+                            className="text-nav_t_Color dark:text-nav_t_color-dark">
+                        {darkMode ? <SunIcon className="h-6 w-6"/> : <MoonIcon className="h-6 w-6"/>}
                     </button>
 
                     <button onClick={() => setMenuOpen(!menuOpen)}>
                         {menuOpen ? (
-                            <XIcon className="h-8 w-8 text-nav_t_Color dark:text-nav_t_color-dark" />
+                            <XIcon className="h-8 w-8 text-nav_t_Color dark:text-nav_t_color-dark"/>
                         ) : (
-                            <MenuIcon className="h-8 w-8 text-nav_t_Color dark:text-nav_t_color-dark" />
+                            <MenuIcon className="h-8 w-8 text-nav_t_Color dark:text-nav_t_color-dark"/>
                         )}
                     </button>
                 </div>
@@ -63,7 +69,7 @@ export default function Home() {
                         onClick={() => setDarkMode(!darkMode)}
                         className="hidden md:block text-nav_t_Color dark:text-nav_t_color-dark"
                     >
-                        {darkMode ? <SunIcon className="h-6 w-6" /> : <MoonIcon className="h-6 w-6" />}
+                        {darkMode ? <SunIcon className="h-6 w-6"/> : <MoonIcon className="h-6 w-6"/>}
                     </button>
 
 
@@ -91,14 +97,17 @@ export default function Home() {
             </nav>
 
             <div>
-                <MyHead />
-                <Projects />
-                <Experience />
-                <Education />
-                <Award />
-                <Languages />
-                <Form />
-                <Footer />
+                <MyHead/>
+                <Code options={{loop: true, align: "start"}}/>
+                <Tools options={{loop: true, align: "start"}}/>
+                <Framwork options={{loop: true, align: "start"}}/>
+                <Projects/>
+                <Experience/>
+                <Education/>
+                <Award/>
+                <Languages/>
+                <Form/>
+                <Footer/>
             </div>
         </div>
     );

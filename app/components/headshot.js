@@ -84,7 +84,7 @@ export default function MyHead() {
                 <div className="flex flex-col items-center space-y-4 my-4">
                     {accomplishments.map((item, index) => (
                         <p key={index} className="text-center text-lg font-light">
-                            <strong className="font-bold">{item.title}:</strong> {item.description}
+                            <strong className="font-bold">{item.title}:</strong><br/> {item.description}
                         </p>
                     ))}
                 </div>
