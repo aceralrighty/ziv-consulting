@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import HeadshotImg from "/public/headshot.JPG";
+import HeadshotImg from "/public//headshot.JPG";
 import Image from "next/image";
 
 const accomplishments = [
@@ -64,7 +64,7 @@ export default function MyHead() {
                     alt="headshot"
                     width={320}
                     height={320}
-                    objectFit="cover"
+                    objectFit={"cover"}
                     className="rounded-full"
                 />
             </div>

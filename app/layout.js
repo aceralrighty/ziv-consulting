@@ -28,8 +28,8 @@ export default function RootLayout({children}) {
             <link rel="icon" href="/favicon.ico" />
         </Head>
         <body
-            className={`${instru_reg.variable} antialiased bg-global_bg`}>
-        <header className={`${instru_i.variable}`}>
+            className={`${instru_reg.variable} antialiased bg-global_bg w-full flex justify-center`}>
+        <header className={`${instru_i.variable} w-96 sm:w-full`}>
             {children}
         </header>
         </body>
