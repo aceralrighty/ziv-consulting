@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import HeadshotImg from "/public//headshot.JPG";
+import HeadshotImg from "/public/headshot.JPG";
 import Image from "next/image";
 
 const accomplishments = [

@@ -1,11 +1,28 @@
 const projects = [
     {
-        title: "Project Title",
-        description: "Brief description of the project.",
-        technologies: "Tech stack used",
-        link: "#"
+        title: "Flash Back",
+        description: "This game was created for Byte Jam 2024 competition. In collaboration with 5 other students",
+        technologies: "Teams, Github, C#, GDScript, Krita",
+        link: "https://github.com/Time-Techies/time_techies_team.git",
     },
-
+    {
+        title: "Python 2 Final",
+        description: "This final is incomplete but the majority of work is there",
+        technologies: "Github, Flask, Python, Discord, Jinja2",
+        link: "https://github.com/aceralrighty/python_final.git"
+    },
+    {
+        title: "Travel Oasis",
+        description: "This project showed me how to built multi class projects in Java, with a super class and sub classes",
+        technologies: "Github, Java, Maven",
+        link: "https://github.com/aceralrighty/travel-oasis.git"
+    },
+    {
+        title: "Library",
+        description: "This was my biggest Java project, with 2 super classes, 6 sub classes, 3 Enums and much more",
+        technologies: "Github, Java, Maven",
+        link: "https://github.com/aceralrighty/library.git"
+    }
 ];
 
 export default function Projects() {
@@ -27,7 +44,12 @@ export default function Projects() {
                             <p className="text-sm font-semibold mb-2 text-body_t_Color dark:text-body_t_color-dark">
                                 Technologies: {project.technologies}
                             </p>
-                            <a href={project.link} className="text-blue-500 hover:underline dark:text-blue-400">
+                            <a
+                                href={project.link}
+                                className="text-blue-500 hover:underline dark:text-blue-400"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 View Project
                             </a>
                         </div>

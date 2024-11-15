@@ -11,7 +11,7 @@ import Projects from "./components/projects";
 import Footer from "./components/footer";
 import Code from "./components/code_lang";
 import Tools from "./components/tools";
-import Framwork from "./components/frameworks";
+import Framework from "./components/frameworks";
 import {MenuIcon, XIcon, SunIcon, MoonIcon} from "@heroicons/react/solid";
 
 export default function Home() {
@@ -100,7 +100,7 @@ export default function Home() {
                 <MyHead/>
                 <Code />
                 <Tools />
-                <Framwork />
+                <Framework />
                 <Projects/>
                 <Experience/>
                 <Education/>
