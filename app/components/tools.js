@@ -9,8 +9,8 @@ import aws from "/public/icons/AWS.png"
 import ado from "/public/icons/Azure Devops.png"
 import rider from "/public/icons/Rider.png"
 import webstorm from "/public/icons/WebStorm.png"
-import mysql from "/public/icons/Mysql.png"
-import sqlite from "/public/icons/Sqlite.png"
+import mysql from "/public/icons/MySQL.png"
+import sqlite from "/public/icons/SQLite.png"
 import docker from "/public/icons/Docker.png"
 import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-autoplay";

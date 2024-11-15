@@ -2,7 +2,7 @@ import react from "/public/icons/react.png"
 import pytest from "/public/icons/pytest.png"
 import dotnet from "/public/icons/dotnet.png"
 import flask from "/public/icons/flask.png"
-import spring from "/public/icons/spring.png"
+import spring from "/public/icons/Spring.png"
 import sqlalchemy from "/public/icons/SQLAlchemy.png"
 import junit from "/public/icons/JUnit.png"
 import tailwind from "/public/icons/tailwind.png";
