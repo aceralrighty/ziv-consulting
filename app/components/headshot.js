@@ -68,7 +68,7 @@ export default function MyHead() {
                     className="rounded-full"
                 />
             </div>
-            <div className="w-3/4 md:w-1/2 bg-gray-100 p-6 rounded-lg shadow-md text-gray-800">
+            <div className="w-3/4 md:w-1/2 bg-item_bg dark:bg-item_bg_dark p-6 rounded-lg shadow-md text-gray-800 dark:text-body_t_color-dark">
                 <p className="text-lg leading-relaxed font-light text-left">
                     As a forthcoming software engineer with a robust technical foundation and a burgeoning interest in
                     leadership, I aspire to transition into management positions within the technology industry. My

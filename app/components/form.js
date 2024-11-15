@@ -1,5 +1,5 @@
 "use client";
-import {useState} from "react";
+import { useState } from "react";
 
 export default function Form() {
     const [fullName, setFullName] = useState("");
@@ -23,9 +23,8 @@ export default function Form() {
                 body: JSON.stringify(formData),
             });
 
-
             if (!response.ok) {
-                 new Error(`HTTP error! Status: ${response.status}`);
+                new Error(`HTTP error! Status: ${response.status}`);
             }
 
             // Use .text() temporarily to inspect the response
@@ -36,47 +35,56 @@ export default function Form() {
         }
     };
 
-
     return (
         <div className="flex flex-col items-center mt-16 space-y-8 pb-16">
-            <form onSubmit={handleSubmit} className="w-3/4 md:w-1/2 bg-gray-100 p-8 rounded-lg shadow-md text-gray-800">
-                <h1 className="text-2xl font-bold mb-6 text-center text-nav_t_Color">Send me an email if you&#39;re
-                    interested</h1>
+            <form
+                onSubmit={handleSubmit}
+                className="w-3/4 md:w-1/2 bg-item_bg dark:bg-item_bg_dark p-8 rounded-lg shadow-md text-gray-800 dark:text-body_t_color-dark"
+            >
+                <h1 className="text-2xl font-bold mb-6 text-center text-nav_t_Color dark:text-nav_t_color-dark">
+                    Send me an email if you&#39;re interested
+                </h1>
 
                 <div className="flex flex-col space-y-4">
-                    <label htmlFor="fullName" className="text-sm font-semibold text-gray-700">Full Name</label>
+                    <label htmlFor="fullName" className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                        Full Name
+                    </label>
                     <input
                         type="text"
                         id="fullName"
                         placeholder="Enter your full name"
                         value={fullName}
                         onChange={(e) => setFullName(e.target.value)}
-                        className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        className="p-3 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 bg-item_bg dark:bg-global_bg_dark"
                     />
 
-                    <label htmlFor="email" className="text-sm font-semibold text-gray-700">Email</label>
+                    <label htmlFor="email" className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                        Email
+                    </label>
                     <input
                         type="email"
                         id="email"
                         placeholder="What is your email?"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        className="p-3 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 bg-item_bg dark:bg-global_bg_dark"
                     />
 
-                    <label htmlFor="message" className="text-sm font-semibold text-gray-700">Message</label>
+                    <label htmlFor="message" className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                        Message
+                    </label>
                     <textarea
                         id="message"
                         placeholder="What kind of help are you looking for?"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
-                        className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none"
+                        className="p-3 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none bg-item_bg dark:bg-global_bg_dark"
                         rows="4"
                     />
 
                     <button
                         type="submit"
-                        className="flex items-center justify-center space-x-2 p-3 mt-6 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors duration-300"
+                        className="flex items-center justify-center space-x-2 p-3 mt-6 bg-blue-500 dark:bg-blue-600 text-white rounded-md hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors duration-300"
                     >
                         <span>Submit</span>
                         <svg

@@ -5,12 +5,18 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
         nav_t_Color: "#1470AF",
-        body_t_Color: "#000000",
-        global_bg: "#EAEAEE"
+        'nav_t_color-dark': "#FFFFFF",
+        'body_t_color-dark': "#FFFFFF",
+        body_t_Color: "#26261F",
+        global_bg: "#C6C5B9",
+        'global_bg_dark': "#393D3F",
+        item_bg: "#E0DFD9",
+        "item_bg_dark": '#2A2D2F',
       },
       transformOrigin: {
         "center":"center",
