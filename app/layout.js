@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Head from "next/head";
 
 const instru_reg = localFont({
     src: "./fonts/InstrumentSerif-Regular.ttf",
@@ -23,7 +24,9 @@ export const metadata = {
 export default function RootLayout({children}) {
     return (
         <html lang="en">
-
+        <Head>
+            <link rel="icon" href="/favicon.ico" />
+        </Head>
         <body
             className={`${instru_reg.variable} antialiased bg-global_bg`}>
         <header className={`${instru_i.variable}`}>
