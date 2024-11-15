@@ -15,16 +15,15 @@ const instru_i = localFont({
 export const metadata = {
     title: "Ziv Consulting",
     description: "Created by Adam Ziv",
+    icons: {
+        icon: '/favicon.ico',
+    }
 };
 
 export default function RootLayout({children}) {
     return (
         <html lang="en">
-        <head>
-            {/* this might not work as an icon*/}
-            <link rel="icon" href="favicon.ico" sizes="16x16" />
-            <title>Ziv Consulting</title>
-        </head>
+
         <body
             className={`${instru_reg.variable} antialiased bg-global_bg`}>
         <header className={`${instru_i.variable}`}>
