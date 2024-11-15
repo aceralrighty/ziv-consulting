@@ -16,7 +16,7 @@ export const metadata = {
     title: "Ziv Consulting",
     description: "Created by Adam Ziv",
     icons: {
-        icon: '/favicon.ico',
+        icon: ".//favicon.ico",
     }
 };
 
