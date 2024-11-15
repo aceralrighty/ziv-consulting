@@ -58,7 +58,7 @@ export default function Tools() {
                         className="embla__container flex items-center"
                         style={{
                             display: "flex",
-                            gap: "90px",
+                            gap: "100px",
                         }}
                     >
                         {toolsData.map((slide, index) => (
@@ -67,7 +67,7 @@ export default function Tools() {
                                 key={index}
                                 style={{
                                     flex: "0 0 auto",
-                                    width: "150px",
+                                    width: "160px",
                                 }}
                             >
                                 <Image

@@ -53,7 +53,7 @@ export default function Code() {
                     <div
                         className="embla__container flex"
                         style={{
-                            gap: "90px",
+                            gap: "100px",
                         }}
                     >
                         {slidesData.map((slide, index) => (
@@ -62,7 +62,7 @@ export default function Code() {
                                 key={index}
                                 style={{
                                     flex: "0 0 auto",
-                                    width: "150px",
+                                    width: "160px",
                                 }}
                             >
                                 <Image

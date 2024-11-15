@@ -47,7 +47,7 @@ return (
                     className="embla__container flex items-center"
                     style={{
                         display: "flex",
-                        gap: "90px",
+                        gap: "100px",
                     }}
                 >
                     {frameworksData.map((slide, index) => (
@@ -56,7 +56,7 @@ return (
                             key={index}
                             style={{
                                 flex: "0 0 auto",
-                                width: "150px",
+                                width: "160px",
                             }}
                         >
                             <Image

@@ -98,9 +98,9 @@ export default function Home() {
 
             <div>
                 <MyHead/>
-                <Code options={{loop: true, align: "start"}}/>
-                <Tools options={{loop: true, align: "start"}}/>
-                <Framwork options={{loop: true, align: "start"}}/>
+                <Code />
+                <Tools />
+                <Framwork />
                 <Projects/>
                 <Experience/>
                 <Education/>
