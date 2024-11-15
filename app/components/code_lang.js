@@ -37,7 +37,7 @@ export default function Code() {
         [
             AutoScroll({
                 playOnInit: true,
-                delay: 3000,
+                delay: 2850,
                 stopOnInteraction: false,
             }),
         ]

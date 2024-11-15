@@ -31,7 +31,7 @@ export default function Framwork() {
     }, [
         AutoScroll({
             playOnInit: true,
-            delay: 3000,
+            delay: 3150,
             stopOnInteraction: false,
         }),
     ]);
