@@ -1,20 +1,20 @@
 "use client";
-import { useState } from "react";
-import HeadshotImg from "/public/headshot.JPG";
+import {useState} from "react";
+import HeadshotImg from "/public/headshot.jpg";
 import Image from "next/image";
 
 const accomplishments = [
     {
         title: "Problem-solving",
-        description: "I developed the ability to approach intricate challenges from diverse viewpoints, identifying effective solutions that aligned with organizational objectives."
+        description: " I learned to approach complex challenges from multiple angles, finding solutions that aligned with the company's goals."
     },
     {
         title: "Collaboration",
-        description: "Working in close proximity with cross-functional teams fostered robust communication and teamwork abilities, crucial for leading diverse groups of individuals."
+        description: "By working closely with cross-functional teams, I gained experience in communication and teamwork—skills that are vital for working in or eventually leading diverse groups."
     },
     {
         title: "Adaptability",
-        description: "The rapidly evolving fintech landscape necessitated adaptability and a willingness to embrace novel technologies and methodologies. This experience has equipped me to navigate the ever-changing demands of management roles."
+        description: "The fast-paced nature of fintech required me to quickly adjust to new technologies and methods, preparing me for the flexibility needed in future leadership roles."
     }
 ];
 
@@ -31,14 +31,14 @@ export default function MyHead() {
     };
 
     const handleMouseMove = (e) => {
-        const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+        const {left, top, width, height} = e.currentTarget.getBoundingClientRect();
         const x = e.clientX - left - width / 2;
         const y = e.clientY - top - height / 2;
         handleInteraction(x, y, width, height);
     };
 
     const handleTouchStart = (e) => {
-        const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+        const {left, top, width, height} = e.currentTarget.getBoundingClientRect();
         const touch = e.touches[0];
         const x = touch.clientX - left - width / 2;
         const y = touch.clientY - top - height / 2;
@@ -46,7 +46,7 @@ export default function MyHead() {
     };
 
     const handleInteractionEnd = () => {
-        setShadowStyle({ boxShadow: "0 0 25px rgba(0, 0, 0, 0.5)" });
+        setShadowStyle({boxShadow: "0 0 25px rgba(0, 0, 0, 0.5)"});
     };
 
     return (
@@ -68,17 +68,18 @@ export default function MyHead() {
                     className="rounded-full"
                 />
             </div>
-            <div className="w-3/4 md:w-1/2 bg-item_bg dark:bg-item_bg_dark p-6 rounded-lg shadow-md text-gray-800 dark:text-body_t_color-dark">
+            <div
+                className="w-3/4 md:w-1/2 bg-item_bg dark:bg-item_bg_dark p-6 rounded-lg shadow-md text-gray-800 dark:text-body_t_color-dark">
                 <p className="text-lg leading-relaxed font-light text-left">
-                    As a forthcoming software engineer with a robust technical foundation and a burgeoning interest in
-                    leadership, I aspire to transition into management positions within the technology industry. My
-                    recent summer internship at Cambridge Investment Research provided invaluable insights into the
-                    dynamic convergence of finance and technology, reinforcing my conviction in my potential to make
-                    a substantial contribution to the success of future employers.
+                    As an emerging software engineer with a solid technical foundation and growing interest in
+                    leadership, I am excited to build my career in the technology industry with a long-term goal of
+                    taking on management responsibilities. My recent internship at Cambridge Investment Research offered
+                    valuable insights into the intersection of finance and technology, strengthening my belief in my
+                    ability to contribute meaningfully to future employers' success.
 
-                    During my internship, I had the privilege of working on a fully functional payment processing
-                    portal that clients could utilize for payment transactions. These experiences not only enhanced my
-                    technical proficiency but also honed essential management skills, including:
+                    During my internship, I had the opportunity to work on a fully functional payment processing portal
+                    that clients could use for transactions. This hands-on experience not only sharpened my technical
+                    skills but also gave me a glimpse into the importance of developing soft skills, such as:
                 </p>
 
                 <div className="flex flex-col items-center space-y-4 my-4">
@@ -90,10 +91,9 @@ export default function MyHead() {
                 </div>
 
                 <p className="text-lg leading-relaxed font-light text-left">
-                    Through my internship, I developed a profound appreciation for the transformative impact of
-                    technology on the financial sector. I am eager to leverage my technical expertise and leadership
-                    acumen to drive innovation and deliver value to organizations that are shaping the future of
-                    finance.
+                    This internship deepened my appreciation for how technology is transforming the financial industry,
+                    and I am excited to continue developing my skills in both technical and leadership areas, so I can
+                    contribute to the growth and innovation of organizations in the future.
                 </p>
             </div>
         </div>
