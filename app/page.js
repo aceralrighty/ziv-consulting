@@ -37,14 +37,13 @@ export default function Home() {
                     className="fixed inset-0 bg-global_bg dark:bg-global_bg_dark opacity-95 transition-opacity duration-300 z-10"></div>
             )}
 
-            <nav className="relative z-20 flex items-center justify-between px-4 mt-4">
-
+            <nav
+                className="sticky top-0 z-20 flex items-center justify-between px-4 mt-4 bg-global_bg dark:bg-global_bg_dark shadow-md">
                 <div className="font-instruItalic px-4">
                     <p className="text-nav_t_Color dark:text-nav_t_color-dark text-2xl">Ziv Consulting</p>
                 </div>
 
                 <div className="md:hidden flex items-center space-x-4">
-
                     <button onClick={() => setDarkMode(!darkMode)}
                             className="text-nav_t_Color dark:text-nav_t_color-dark">
                         {darkMode ? <SunIcon className="h-6 w-6"/> : <MoonIcon className="h-6 w-6"/>}
@@ -64,14 +63,12 @@ export default function Home() {
                         menuOpen ? "block" : "hidden"
                     } md:flex md:space-x-4 font-instruItalic px-4 transition-transform duration-300 ease-in-out items-center`}
                 >
-
                     <button
                         onClick={() => setDarkMode(!darkMode)}
                         className="hidden md:block text-nav_t_Color dark:text-nav_t_color-dark"
                     >
                         {darkMode ? <SunIcon className="h-6 w-6"/> : <MoonIcon className="h-6 w-6"/>}
                     </button>
-
 
                     <a
                         href="#"
@@ -96,11 +93,12 @@ export default function Home() {
                 </div>
             </nav>
 
+
             <div>
                 <MyHead/>
-                <Code />
-                <Tools />
-                <Framework />
+                <Code/>
+                <Tools/>
+                <Framework/>
                 <Projects/>
                 <Experience/>
                 <Education/>
