@@ -1,39 +1,39 @@
-import { PrismaClient } from '@prisma/client';
-import { NextResponse } from 'next/server';
+import mail from "@sendgrid/mail";
 
-const prisma = new PrismaClient();
-export const runtime = "edge";
+mail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export async function POST(req) {
     try {
-        const { full_name, email, message } = await req.json();
+        // Parse the request body
+        const body = await req.json();
+        const message = `
+            Name: ${body.full_name} \r\n
+            Email: ${body.email}\r\n
+            Message: ${body.message}
+        `;
 
-        if (!full_name || !email || !message) {
-            return NextResponse.json(
-                { error: "Missing required fields" },
-                { status: 400 }
-            );
-        }
 
-        const newInquiry = await prisma.inquiries.create({
-            data: {
-                userName: full_name,
-                userEmail: email,
-                message: message,
-            },
+        const dataPayload = {
+            to: "adamziv156@gmail.com",
+            from: "client@em6999.ziv-consulting.dev",
+            subject: "Potential Client Inquiry",
+            text: message,
+            html: message.replace(/\r\n/g, "<br>"),
+        };
+
+
+        await mail.send(dataPayload);
+
+
+        return new Response(JSON.stringify({status: "Email sent successfully!"}), {
+            status: 200,
+            headers: {"Content-Type": "application/json"},
         });
-
-        return NextResponse.json(
-            {
-                message: "Inquiry saved successfully!",
-                data: newInquiry,
-            },
-            { status: 201 }
-        );
     } catch (error) {
-        return NextResponse.json(
-            { error: "Internal server error" },
-            { status: 500 }
+        console.error("Error sending email:", error);
+        return new Response(
+            JSON.stringify({error: "Failed to send email. Please try again later."}),
+            {status: 500, headers: {"Content-Type": "application/json"}}
         );
     }
 }

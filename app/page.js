@@ -71,22 +71,24 @@ export default function Home() {
                     </button>
 
                     <a
-                        href="#"
+                        href="#about"
                         className={`mr-4 text-nav_t_Color dark:text-nav_t_color-dark text-2xl transition-all duration-300 ${
                             hovered ? "drop-shadow-lg scale-105" : "scale-100"
                         }`}
                         onMouseEnter={() => setHovered(true)}
                         onMouseLeave={() => setHovered(false)}
+                        onClick={() => setMenuOpen(false)}
                     >
                         About
                     </a>
                     <a
-                        href="#"
+                        href="#contact"
                         className={`mr-4 text-nav_t_Color dark:text-nav_t_color-dark text-2xl transition-all duration-300 ${
                             hoveredContact ? "drop-shadow-lg scale-105" : "scale-100"
                         }`}
                         onMouseEnter={() => setHoveredContact(true)}
                         onMouseLeave={() => setHoveredContact(false)}
+                        onClick={() => setMenuOpen(false)}
                     >
                         Contact
                     </a>

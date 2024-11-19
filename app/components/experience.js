@@ -57,7 +57,7 @@ export default function Experience() {
                     {experience.length > 0 && (
                         <div className="flex items-center mt-8 space-x-4">
                             <div className="w-64 h-64 rounded-lg overflow-hidden hidden sm:block">
-                                <Image src={Army} alt="Army" width={256} height={256} objectFit={"cover"} />
+                                <Image src={Army} alt="Army" width={256} height={256} style={{ objectFit: "cover" }} />
                             </div>
                             <div className="text-left">
                                 <p className="text-lg leading-relaxed font-light text-body_t_Color dark:text-body_t_color-dark">

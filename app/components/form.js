@@ -1,5 +1,6 @@
 "use client"
 import {useState} from "react";
+import {toast} from "react-toastify";
 
 export default function Form() {
     const [fullName, setFullName] = useState("");
@@ -11,18 +12,15 @@ export default function Form() {
         e.preventDefault();
         setIsLoading(true);
 
-        if (!fullName || !email || !message) {
-            alert("Please fill in all fields.");
-            setIsLoading(false);
-            return;
-        }
+        const formData = {}
+        Array.from(e.currentTarget.elements).forEach((el) => {
+            if (!el.name) return
+            formData[el.name] = el.value
+        })
 
         try {
-            const response = await fetch("/api/contact-edge", {
+            const response = await fetch("/api/contact", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
                 body: JSON.stringify({
                     full_name: fullName,
                     email: email,
@@ -31,28 +29,31 @@ export default function Form() {
             });
 
             if (response.ok) {
-                const data = await response.json();
-                console.log("Success:", data);
-                setIsLoading(false);
+                toast.success("Message sent successfully!", {
+                    position: "bottom-right",
+                });
                 setFullName("");
                 setEmail("");
                 setMessage("");
-                alert("Your message has been sent successfully!");
             } else {
-                const errorData = await response.json();
-                console.error("Error:", errorData);
-                setIsLoading(false);
-                alert("Failed to send your message. Please try again later.");
+                toast.error("Message failed to send", {
+                    position: "bottom-right",
+                })
             }
         } catch (error) {
-            setIsLoading(false);
             console.error("Error submitting the form:", error);
-            alert("Failed to send your message. Please try again later.");
+            toast.error("An unexpected error occurred. Please try again later.", {
+                position: "bottom-right",
+            });
+
+
+        } finally {
+            setIsLoading(false);
         }
     };
 
     return (
-        <div className="flex flex-col items-center mt-16 space-y-8 pb-16">
+        <div className="flex flex-col items-center mt-16 space-y-8 pb-16" id="contact">
             <form
                 onSubmit={handleSubmit}
                 className="w-3/4 md:w-1/2 bg-item_bg dark:bg-item_bg_dark p-8 rounded-lg shadow-md text-gray-800 dark:text-body_t_color-dark"
