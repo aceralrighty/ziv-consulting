@@ -18,10 +18,10 @@ export default function Form() {
         }
 
         try {
-            const response = await fetch("/api/contact", {
-                method: "POST", // Send as POST request
+            const response = await fetch("/api/contact-edge", {
+                method: "POST",
                 headers: {
-                    "Content-Type": "application/json", // Set the content type to JSON
+                    "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
                     full_name: fullName,
