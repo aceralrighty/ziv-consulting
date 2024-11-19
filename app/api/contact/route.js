@@ -23,13 +23,15 @@ export async function POST(req) {
         };
 
 
-        await mail.send(dataPayload);
+        mail.send(dataPayload).then(() => {
+            return new Response(JSON.stringify({status: "Email sent successfully!"}), {
+                status: 200,
+                headers: {"Content-Type": "application/json"},
+            });
 
-
-        return new Response(JSON.stringify({status: "Email sent successfully!"}), {
-            status: 200,
-            headers: {"Content-Type": "application/json"},
         });
+
+
     } catch (error) {
         console.error("Error sending email:", error);
         return new Response(
