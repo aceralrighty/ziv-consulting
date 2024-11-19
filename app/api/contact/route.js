@@ -3,8 +3,9 @@ import mail from "@sendgrid/mail";
 mail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export async function POST(req) {
+
     try {
-        // Parse the request body
+
         const body = await req.json();
         const message = `
             Name: ${body.full_name} \r\n
