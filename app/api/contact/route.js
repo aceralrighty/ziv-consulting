@@ -23,13 +23,11 @@ export async function POST(req) {
         };
 
 
-        mail.send(dataPayload).then(() => {
+        await mail.send(dataPayload)
             return new Response(JSON.stringify({status: "Email sent successfully!"}), {
                 status: 200,
                 headers: {"Content-Type": "application/json"},
             });
-
-        });
 
 
     } catch (error) {
