@@ -16,7 +16,7 @@ export async function POST(req) {
 
         const dataPayload = {
             to: "adamziv156@gmail.com",
-            from: "client@em6999.ziv-consulting.dev",
+            from: "client@ziv-consulting.dev",
             subject: "Potential Client Inquiry",
             text: message,
             html: message.replace(/\r\n/g, "<br>"),
