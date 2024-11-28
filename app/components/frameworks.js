@@ -23,7 +23,7 @@ const frameworksData = [
     {icon: tailwind, name: "Tailwind CSS"},
     {icon: jquery, name: "JQuery"},
 ]
-export default function Framwork() {
+export default function Framework() {
     const [emblaRef] = useEmblaCarousel({
         loop: true,
         align: "start",

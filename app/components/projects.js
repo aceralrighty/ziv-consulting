@@ -6,8 +6,8 @@ const projects = [
         link: "https://github.com/Time-Techies/time_techies_team.git",
     },
     {
-        title: "Python 2 Final",
-        description: "This final is incomplete but the majority of work is there",
+        title: "Python Project (Incomplete)",
+        description: "This is incomplete but the majority of work is there",
         technologies: "Github, Flask, Python, Discord, Jinja2",
         link: "https://github.com/aceralrighty/python_final.git"
     },
@@ -19,9 +19,16 @@ const projects = [
     },
     {
         title: "Library",
-        description: "This was my biggest Java project, with 2 super classes, 6 sub classes, 3 Enums and much more",
+        description: "This was my project, with 2 super classes, 6 sub classes, 3 Enums and much more",
         technologies: "Github, Java, Maven",
         link: "https://github.com/aceralrighty/library.git"
+    }
+    ,
+    {
+        title: "My portfolio",
+        description: "This is my source code for the website you are currently viewing",
+        technologies: "Github, Next.Js, TailwindCSS, SendGrid, CloudFlare, Vercel",
+        link:"https://github.com/aceralrighty/ziv-consulting"
     }
 ];
 
