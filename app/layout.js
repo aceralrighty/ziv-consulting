@@ -1,7 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Head from "next/head";
-import { ToastContainer } from "react-toastify";
+import {ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const instru_reg = localFont({
@@ -31,7 +31,7 @@ export default function RootLayout({children}) {
             <link rel="icon" href="/favicon.ico"/>
         </Head>
         <body
-            className={`${instru_reg.variable} antialiased bg-global_bg w-full flex justify-center`}>
+            className={`${instru_reg.variable} antialiased bg-global_bg w-full flex justify-center dark:bg-global_bg_dark`}>
         <header className={`${instru_i.variable} w-96 sm:w-full`}>
             {children}
         </header>

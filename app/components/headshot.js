@@ -64,12 +64,13 @@ export default function MyHead() {
                     alt="headshot"
                     width={320}
                     height={320}
-                    style={{ objectFit: "cover" }}
+                    style={{objectFit: "cover"}}
                     className="rounded-full"
                 />
             </div>
             <div
-                className="w-3/4 md:w-1/2 bg-item_bg dark:bg-item_bg_dark p-6 rounded-lg shadow-md text-gray-800 dark:text-body_t_color-dark" id="about">
+                className="w-3/4 md:w-1/2 bg-item_bg dark:bg-item_bg_dark p-6 rounded-lg shadow-md text-gray-800 dark:text-body_t_color-dark"
+                id="about">
                 <p className="text-lg leading-relaxed font-light text-left">
                     As an emerging software engineer with a solid technical foundation and growing interest in
                     leadership, I am excited to build my career in the technology industry with a long-term goal of
@@ -84,9 +85,10 @@ export default function MyHead() {
 
                 <div className="flex flex-col items-center space-y-4 my-4">
                     {accomplishments.map((item, index) => (
-                        <p key={index} className="text-center text-lg font-light">
-                            <strong className="font-bold">{item.title}:</strong><br/> {item.description}
-                        </p>
+                        <div key={index} className="text-center text-lg font-light">
+                            <strong className="block font-bold">{item.title}</strong>
+                            <span className="block text-left">{item.description}</span>
+                        </div>
                     ))}
                 </div>
 
