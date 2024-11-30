@@ -25,10 +25,16 @@ const projects = [
     }
     ,
     {
-        title: "My portfolio",
+        title: "My Portfolio",
         description: "This is my source code for the website you are currently viewing",
         technologies: "Github, Next.Js, TailwindCSS, SendGrid, CloudFlare, Vercel",
         link:"https://github.com/aceralrighty/ziv-consulting"
+    },
+    {
+        title: "My experimental chat system(Work In Progress)",
+        description: "This project is a part of my journey to learn about real-time messaging systems with Kafka as it's backbone",
+        technologies: "Github, Java, Maven, Apache Kafka",
+        link:"https://github.com/aceralrighty/kafkaChat"
     }
 ];
 
