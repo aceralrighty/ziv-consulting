@@ -73,7 +73,7 @@ export default function MyHead() {
                 id="about">
                 <p className="text-lg leading-relaxed font-light text-left">
                     As an emerging software engineer with a solid technical foundation and growing interest in
-                    leadership, I am excited to build my career in the technology industry with a long-term goal of
+                    leadership. I am excited to build my career in the technology industry with a long-term goal of
                     taking on management responsibilities. My recent internship at Cambridge Investment Research offered
                     valuable insights into the intersection of finance and technology, strengthening my belief in my
                     ability to contribute meaningfully to future employers' success.

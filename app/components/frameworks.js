@@ -7,6 +7,7 @@ import sqlalchemy from "/public/icons/SQLAlchemy.png"
 import junit from "/public/icons/JUnit.png"
 import tailwind from "/public/icons/tailwind.png";
 import jquery from "/public/icons/jquery.png";
+import kafka from "/public/icons/Apache Kafka.png"
 import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-autoplay";
 import "../globals.css";
@@ -22,6 +23,7 @@ const frameworksData = [
     {icon: sqlalchemy, name: "SQLAlchemy"},
     {icon: tailwind, name: "Tailwind CSS"},
     {icon: jquery, name: "JQuery"},
+    {icon: kafka, name: "Apache Kafka"},
 ]
 export default function Framework() {
     const [emblaRef] = useEmblaCarousel({
