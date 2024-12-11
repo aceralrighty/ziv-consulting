@@ -8,8 +8,7 @@ import junit from "/public/icons/JUnit.png"
 import tailwind from "/public/icons/tailwind.png";
 import jquery from "/public/icons/jquery.png";
 import kafka from "/public/icons/Apache Kafka.png"
-import useEmblaCarousel from "embla-carousel-react";
-import AutoScroll from "embla-carousel-autoplay";
+import Slider from "react-slick";
 import "../globals.css";
 import Image from "next/image";
 
@@ -26,17 +25,34 @@ const frameworksData = [
     {icon: kafka, name: "Apache Kafka"},
 ]
 export default function Framework() {
-    const [emblaRef] = useEmblaCarousel({
-        loop: true,
-        align: "start",
-        skipSnaps: true,
-    }, [
-        AutoScroll({
-            playOnInit: true,
-            delay: 3150,
-            stopOnInteraction: false,
-        }),
-    ]);
+    const settings = {
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        autoplay: true,
+        speed: 2600,
+        autoplaySpeed: 2600,
+        cssEase: "linear",
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        swipe: false,
+        responsive: [
+            {
+                breakpoint: 768, // Mobile
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 480, // Smaller devices
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+        ],
+    };
 
 return (
     <section className="flex flex-col items-center mt-16 space-y-8">
@@ -44,38 +60,23 @@ return (
             Frameworks
         </h2>
         <div className="w-3/4 md:w-1/2 bg-item_bg dark:bg-item_bg_dark p-6 rounded-lg shadow-md">
-            <div className="embla w-full overflow-hidden" ref={emblaRef}>
-                <div
-                    className="embla__container flex items-center"
-                    style={{
-                        display: "flex",
-                        gap: "100px",
-                    }}
-                >
-                    {frameworksData.map((slide, index) => (
-                        <div
-                            className="embla__slide flex flex-col items-center"
-                            key={index}
-                            style={{
-                                flex: "0 0 auto",
-                                width: "160px",
-                            }}
-                        >
-                            <Image
-                                src={slide.icon}
-                                alt={slide.name}
-                                width={50}
-                                height={50}
-                                className="dark:filter dark:brightness-75"
-                                priority
-                            />
-                            <p className="text-sm font-medium text-nav_t_Color dark:text-nav_t_color-dark">
-                                {slide.name}
-                            </p>
-                        </div>
-                    ))}
-                </div>
-            </div>
+            <Slider {...settings}>
+                {frameworksData.map((framework, index) => (
+                    <div key={index} className="flex flex-col items-center">
+                        <Image
+                            src={framework.icon}
+                            alt={framework.name}
+                            width={50}
+                            height={50}
+                            className="dark:filter dark:brightness-75"
+                            priority
+                        />
+                        <p className="text-sm font-medium text-nav_t_Color dark:text-nav_t_color-dark mt-2">
+                            {framework.name}
+                        </p>
+                    </div>
+                ))}
+            </Slider>
         </div>
     </section>
 );

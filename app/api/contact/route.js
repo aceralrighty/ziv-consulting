@@ -19,7 +19,7 @@ export async function POST(req) {
             from: "client@ziv-consulting.dev",
             subject: "Potential Client Inquiry",
             text: message,
-            html: message.replace(/\r\n/g, "<br>"),
+            html: message.replace(/\r\n/g, "</br>"),
         };
 
 
