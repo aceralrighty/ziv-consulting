@@ -11,6 +11,7 @@ import php from "/public/icons/PHP.png";
 import cobol from "/public/icons/cobol-language-svgrepo-com.png";
 import "../globals.css";
 import Image from "next/image";
+import {useEffect, useState} from "react";
 
 // Data for slides
 const slidesData = [
@@ -27,11 +28,11 @@ const slidesData = [
 ];
 
 export default function Code() {
-    const settings = {
+    const [settings, setSettings] = useState({
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 2,
-        autoplay: true,
+        autoplay: false,
         speed: 2800,
         autoplaySpeed: 2800,
         cssEase: "linear",
@@ -42,19 +43,23 @@ export default function Code() {
         swipe: false,
         responsive: [
             {
-                breakpoint: 768, // Mobile
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
                 },
             },
             {
-                breakpoint: 480, // Smaller devices
+                breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
                 },
             },
         ],
-    };
+    });
+
+    useEffect(() => {
+        setSettings((prev) => ({ ...prev, autoplay: true }));
+    }, []);
 
     return (
         <section className="flex flex-col items-center mt-16 space-y-8">

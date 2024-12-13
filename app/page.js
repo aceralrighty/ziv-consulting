@@ -35,7 +35,7 @@ export default function Home() {
 
 
                 <div className="md:hidden flex items-center space-x-4">
-                    <button onClick={() => setMenuOpen(!menuOpen)}>
+                    <button onClick={() => setMenuOpen(!menuOpen)} >
                         {menuOpen ? (
                             <XIcon className="h-8 w-8 text-nav_t_Color dark:text-nav_t_color-dark" />
                         ) : (
@@ -50,7 +50,7 @@ export default function Home() {
                         menuOpen ? "flex" : "hidden"
                     } md:flex md:space-x-4 flex-col md:flex-row items-center font-instruItalic px-4 transition-transform duration-300 ease-in-out`}
                 >
-                    <ThemeToggle />
+                    <ThemeToggle setMenuOpen={setMenuOpen} />
 
                     <a
                         href="#about"
@@ -72,6 +72,7 @@ export default function Home() {
                         onMouseEnter={() => setHoveredContact(true)}
                         onMouseLeave={() => setHoveredContact(false)}
                         onClick={() => setMenuOpen(false)}
+
                     >
                         Contact
                     </a>

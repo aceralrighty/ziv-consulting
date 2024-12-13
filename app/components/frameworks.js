@@ -11,6 +11,7 @@ import kafka from "/public/icons/Apache Kafka.png"
 import Slider from "react-slick";
 import "../globals.css";
 import Image from "next/image";
+import {useEffect, useState} from "react";
 
 const frameworksData = [
     {icon: react, name: "React"},
@@ -25,13 +26,13 @@ const frameworksData = [
     {icon: kafka, name: "Apache Kafka"},
 ]
 export default function Framework() {
-    const settings = {
+    const [settings, setSettings] = useState({
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 2,
-        autoplay: true,
-        speed: 2600,
-        autoplaySpeed: 2600,
+        autoplay: false, // Initially disabled
+        speed: 3200,
+        autoplaySpeed: 3200,
         cssEase: "linear",
         arrows: false,
         dots: false,
@@ -52,9 +53,14 @@ export default function Framework() {
                 },
             },
         ],
-    };
+    });
 
-return (
+    useEffect(() => {
+        setSettings((prev) => ({ ...prev, autoplay: true })); // Enable autoplay after mount
+    }, []);
+
+
+    return (
     <section className="flex flex-col items-center mt-16 space-y-8">
         <h2 className="font-bold text-4xl font-instruItalic mb-4 text-nav_t_Color dark:text-nav_t_color-dark">
             Frameworks
