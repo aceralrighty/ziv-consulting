@@ -17,7 +17,7 @@ const experience = [
         duties: " Collaborated with an eight-person team in a fast-paced environment to construct high-end furniture, ensuring meticulous attention to detail and exceptional quality."
     },
     {
-        title: "Scanner",
+        title: "Information Operator",
         company: "Madix, Inc.",
         length: "Feb 2020 - Nov 2021",
         where: " Terrell, Texas ",
