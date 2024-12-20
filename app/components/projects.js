@@ -28,13 +28,19 @@ const projects = [
         title: "My Portfolio",
         description: "This is my source code for the website you are currently viewing",
         technologies: "Github, Next.Js, TailwindCSS, SendGrid, CloudFlare, Vercel",
-        link:"https://github.com/aceralrighty/ziv-consulting"
+        link: "https://github.com/aceralrighty/ziv-consulting"
     },
     {
         title: "My experimental chat system(Work In Progress)",
         description: "This project is a part of my journey to learn about real-time messaging systems with Kafka as it's backbone",
         technologies: "Github, Java, Maven, Apache Kafka",
-        link:"https://github.com/aceralrighty/kafkaChat"
+        link: "https://github.com/aceralrighty/kafkaChat"
+    },
+    {
+        title: "Calling an API",
+        description: "This project is me getting more comfortable making calls to API's",
+        technologies: "Github, Java, Maven, Spring Boot",
+        link: "https://github.com/aceralrighty/UFCAPI"
     }
 ];
 
@@ -44,7 +50,8 @@ export default function Projects() {
             <h2 className="font-bold text-4xl font-instruItalic mb-4 text-nav_t_Color dark:text-nav_t_color-dark">
                 My Projects
             </h2>
-            <div className="w-3/4 md:w-1/2 bg-item_bg dark:bg-item_bg_dark p-6 rounded-lg shadow-md text-gray-800 dark:text-body_t_color-dark">
+            <div
+                className="w-3/4 md:w-1/2 bg-item_bg dark:bg-item_bg_dark p-6 rounded-lg shadow-md text-gray-800 dark:text-body_t_color-dark">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 ">
                     {projects.map((project, index) => (
                         <div key={index} className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm">
