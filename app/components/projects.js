@@ -41,7 +41,14 @@ const projects = [
         description: "This project is me getting more comfortable making calls to API's",
         technologies: "Github, Java, Maven, Spring Boot",
         link: "https://github.com/aceralrighty/UFCAPI"
+    },
+    {
+        title: "Web Scraping(Work In Progress)",
+        description: "In this project I use a library i've never used before in order to scrape a website",
+        technologies: "Github, Java, Maven, JSoup",
+        link: "https://github.com/aceralrighty/WebScraper"
     }
+
 ];
 
 export default function Projects() {
