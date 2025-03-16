@@ -49,10 +49,16 @@ const projects = [
         link: "https://github.com/aceralrighty/WebScraper"
     },
     {
-      title: "My Simple Web Server",
-      description: "In this project i'm creating a simple web server that serves a single static web page(not full CRUD)",
-      technologies: "Github, Java, Maven, Jackson, JUnit, Lombok",
-      link: "https://github.com/aceralrighty/HttpServer"
+        title: "My Simple Web Server",
+        description: "In this project i'm creating a simple web server that serves a single static web page(not full CRUD)",
+        technologies: "Github, Java, Maven, Jackson, JUnit, Lombok",
+        link: "https://github.com/aceralrighty/HttpServer"
+    },
+    {
+        title: "Bakery Business Management System(In Progress)",
+        description: "As a backend engineer on this project for my friend's business, i've created a production-grade CRUD system for a real bakery using Spring Boot and Java, with 25+ RESTful APIs for\n" +
+            "inventory, orders, and customers. As well as integrating Stripe payments and Firebase JWT authentication with RBAC, ensuring secure, scalable operations. With push notifications set up through Firebase to update costumers on the status of their orders.",
+        technologies: "Self-hosted Git server, Java, Spring Boot, Maven, Lombok, Angular, Firebase, OAuth, JUnit, GSON, TailwindCSS",
     }
 
 ];

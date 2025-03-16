@@ -24,7 +24,7 @@ export default function Education() {
                                     Indian Hills Community College
                                 </p>
                                 <p className="text-md font-instruItalic text-gray-600 dark:text-gray-300 mt-2">
-                                    Associate of Applied Science - A.A.S, Computer Software Development
+                                    Associate of Applied Science - A.A.S, Computer Software
                                 </p>
                                 <p className="text-sm font-semibold text-gray-500 dark:text-gray-400">
                                     May 2023 - Feb 2025
