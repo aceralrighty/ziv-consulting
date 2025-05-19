@@ -56,7 +56,7 @@ const projects = [
     },
     {
         title: "Bakery Business Management System(In Progress)",
-        description: "As a backend engineer on this project for my friend's business, i've created a production-grade CRUD system for a real bakery using Spring Boot and Java, with 25+ RESTful APIs for\n" +
+        description: "As a backend engineer on this project for my friend's business, i've created a production-grade CRUD system for a real bakery using Spring Boot and Java, with 10+ RESTful APIs for\n" +
             "inventory, orders, and customers. As well as integrating Stripe payments and Firebase JWT authentication with RBAC, ensuring secure, scalable operations. With push notifications set up through Firebase to update costumers on the status of their orders.",
         technologies: "Self-hosted Git server, Java, Spring Boot, Maven, Lombok, Angular, Firebase, OAuth, JUnit, GSON, TailwindCSS, JWT",
         link: "https://www.bauschbakeries.com"
