@@ -8,9 +8,9 @@ updates:
       time: "09:00"
     open-pull-requests-limit: 10
     reviewers:
-      - "your-github-username"
+      - "aceralrighty"
     assignees:
-      - "your-github-username"
+      - "aceralrighty"
     commit-message:
       prefix: "deps"
       include: "scope"
