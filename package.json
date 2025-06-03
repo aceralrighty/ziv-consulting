@@ -13,7 +13,7 @@
     "@heroicons/react": "1.0.6",
     "@planetscale/database": "^1.19.0",
     "@prisma/client": "^6.9.0",
-    "@sendgrid/mail": "^8.1.4",
+    "@sendgrid/mail": "^8.1.5",
     "heroicons": "^2.1.5",
     "next": "15.3.3",
     "path-to-regexp": "^8.2.0",
