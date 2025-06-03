@@ -28,7 +28,7 @@
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.13.5",
+    "@cloudflare/next-on-pages": "^1.13.12",
     "eslint": "^8",
     "eslint-config-next": "15.3.3",
     "postcss": "^8",
