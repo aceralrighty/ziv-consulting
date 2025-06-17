@@ -6,7 +6,8 @@ export default function Awards() {
             <h2 className="font-bold text-4xl font-instru-italic mb-4 text-nav-t dark:text-nav-t-dark">
                 Awards
             </h2>
-            <div className="w-3/4 md:w-1/2 bg-item-bg dark:bg-item-bg-dark p-6 rounded-lg shadow-md text-gray-800 dark:text-body-t-color-dark">
+            <div
+                className="w-3/4 md:w-1/2 bg-item-bg dark:bg-item-bg-dark p-6 rounded-lg shadow-md text-gray-800 dark:text-body-t-color-dark">
                 <div className="flex flex-col space-y-8">
 
                     <div>

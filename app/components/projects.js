@@ -61,7 +61,8 @@ export default function Projects() {
             <h2 className="font-bold text-4xl font-instru-italic mb-4 text-nav-t dark:text-nav-t-dark">
                 My Projects
             </h2>
-            <div className="w-11/12 md:w-2/3 bg-item-bg dark:bg-item-bg-dark p-6 rounded-lg shadow-md text-gray-800 dark:text-body-t-dark">
+            <div
+                className="w-11/12 md:w-2/3 bg-item-bg dark:bg-item-bg-dark p-6 rounded-lg shadow-md text-gray-800 dark:text-body-t-dark">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     {projects.map((project, index) => (
                         <div key={index} className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm">

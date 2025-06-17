@@ -1,13 +1,18 @@
 "use client";
-import { useState, useEffect } from "react";
-import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
+import {useState, useEffect} from "react";
+import {SunIcon, MoonIcon} from "@heroicons/react/24/solid";
 
-export default function ThemeToggle({ setMenuOpen }) {
+export default function ThemeToggle({setMenuOpen}) {
     const [darkMode, setDarkMode] = useState(false);
 
     useEffect(() => {
         const theme = localStorage.getItem("theme");
-        if (theme === "dark") setDarkMode(true);
+        if (theme === "dark") {
+            setDarkMode(true);
+        } else if (!theme) {
+            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            setDarkMode(prefersDark);
+        }
     }, []);
 
     useEffect(() => {
@@ -28,9 +33,9 @@ export default function ThemeToggle({ setMenuOpen }) {
                     setDarkMode(!darkMode);
                     setMenuOpen && setMenuOpen(false);
                 }}
-                className="md:hidden text-nav_t_Color dark:text-nav_t_color-dark"
+                className="md:hidden text-nav-t-color dark:text-nav-t-color-dark"
             >
-                {darkMode ? <SunIcon className="h-6 w-6" /> : <MoonIcon className="h-6 w-6" />}
+                {darkMode ? <SunIcon className="h-6 w-6"/> : <MoonIcon className="h-6 w-6"/>}
             </button>
 
             {/* Desktop Toggle */}
@@ -38,7 +43,7 @@ export default function ThemeToggle({ setMenuOpen }) {
                 onClick={() => setDarkMode(!darkMode)}
                 className="hidden md:block text-nav_t_Color dark:text-nav_t_color-dark"
             >
-                {darkMode ? <SunIcon className="h-6 w-6" /> : <MoonIcon className="h-6 w-6" />}
+                {darkMode ? <SunIcon className="h-6 w-6"/> : <MoonIcon className="h-6 w-6"/>}
             </button>
         </div>
     );

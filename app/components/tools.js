@@ -15,23 +15,23 @@ import sqlite from "/public/icons/SQLite.png";
 import docker from "/public/icons/Docker.png";
 import "../globals.css";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 
 const toolsData = [
-    { icon: py, name: "PyCharm" },
-    { icon: intellij, name: "Intellij IDEA" },
-    { icon: rider, name: "Rider" },
-    { icon: webstorm, name: "WebStorm" },
-    { icon: vscode, name: "VS Code" },
-    { icon: docker, name: "Docker" },
-    { icon: visual_studio, name: "Visual Studio" },
-    { icon: xcode, name: "Xcode" },
-    { icon: oracle, name: "Oracle Apex" },
-    { icon: github, name: "GitHub" },
-    { icon: sqlite, name: "SQLite" },
-    { icon: mysql, name: "MySQL" },
-    { icon: ado, name: "Azure DevOps" },
-    { icon: aws, name: "AWS" },
+    {icon: py, name: "PyCharm"},
+    {icon: intellij, name: "Intellij IDEA"},
+    {icon: rider, name: "Rider"},
+    {icon: webstorm, name: "WebStorm"},
+    {icon: vscode, name: "VS Code"},
+    {icon: docker, name: "Docker"},
+    {icon: visual_studio, name: "Visual Studio"},
+    {icon: xcode, name: "Xcode"},
+    {icon: oracle, name: "Oracle Apex"},
+    {icon: github, name: "GitHub"},
+    {icon: sqlite, name: "SQLite"},
+    {icon: mysql, name: "MySQL"},
+    {icon: ado, name: "Azure DevOps"},
+    {icon: aws, name: "AWS"},
 ];
 
 export default function Tools() {
@@ -65,7 +65,7 @@ export default function Tools() {
     });
 
     useEffect(() => {
-        setSettings((prev) => ({ ...prev, autoplay: true }));
+        setSettings((prev) => ({...prev, autoplay: true}));
     }, []);
 
     return (

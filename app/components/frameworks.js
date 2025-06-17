@@ -10,19 +10,19 @@ import jquery from "/public/icons/jquery.png";
 import kafka from "/public/icons/Apache Kafka.png";
 import Slider from "react-slick";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 
 const frameworksData = [
-    { icon: react, name: "React" },
-    { icon: pytest, name: "PyTest" },
-    { icon: dotnet, name: "Dotnet" },
-    { icon: flask, name: "Flask" },
-    { icon: spring, name: "Spring" },
-    { icon: junit, name: "JUnit" },
-    { icon: sqlalchemy, name: "SQLAlchemy" },
-    { icon: tailwind, name: "Tailwind CSS" },
-    { icon: jquery, name: "JQuery" },
-    { icon: kafka, name: "Apache Kafka" },
+    {icon: react, name: "React"},
+    {icon: pytest, name: "PyTest"},
+    {icon: dotnet, name: "Dotnet"},
+    {icon: flask, name: "Flask"},
+    {icon: spring, name: "Spring"},
+    {icon: junit, name: "JUnit"},
+    {icon: sqlalchemy, name: "SQLAlchemy"},
+    {icon: tailwind, name: "Tailwind CSS"},
+    {icon: jquery, name: "JQuery"},
+    {icon: kafka, name: "Apache Kafka"},
 ];
 
 export default function Framework() {
@@ -56,7 +56,7 @@ export default function Framework() {
     });
 
     useEffect(() => {
-        setSettings((prev) => ({ ...prev, autoplay: true }));
+        setSettings((prev) => ({...prev, autoplay: true}));
     }, []);
 
     return (
@@ -78,7 +78,7 @@ export default function Framework() {
                             />
                             <p
                                 className="text-sm font-medium text-nav-t-color dark:text-nav-t-color-dark mt-4"
-                                style={{ marginLeft: "10px" }}
+                                style={{marginLeft: "10px"}}
                             >
                                 {framework.name}
                             </p>

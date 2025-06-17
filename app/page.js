@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import {useState} from "react";
 import MyHead from "./components/headshot";
 import Experience from "./components/experience";
 import Education from "./components/education";
@@ -12,7 +12,7 @@ import Footer from "./components/footer";
 import Code from "./components/code_lang";
 import Tools from "./components/tools";
 import Framework from "./components/frameworks";
-import { Bars3Icon, XIcon } from "@heroicons/react/24/solid";
+import {Bars3Icon, XIcon} from "@heroicons/react/24/solid";
 import ThemeToggle from "./components/themeToggle";
 
 export default function Home() {
@@ -23,10 +23,12 @@ export default function Home() {
     return (
         <div className="bg-global-bg dark:bg-global-bg-dark dark:text-body-t-dark text-body-t">
             {menuOpen && (
-                <div className="fixed inset-0 bg-global-bg dark:bg-global-bg-dark opacity-95 transition-opacity duration-300 z-10"></div>
+                <div
+                    className="fixed inset-0 bg-global-bg dark:bg-global-bg-dark opacity-95 transition-opacity duration-300 z-10"></div>
             )}
 
-            <nav className="sticky top-0 z-20 flex items-center justify-between px-4 mt-4 bg-global-bg dark:bg-global-bg-dark shadow-md">
+            <nav
+                className="sticky top-0 z-20 flex items-center justify-between px-4 mt-4 bg-global-bg dark:bg-global-bg-dark shadow-md">
                 <div className="font-instru-italic px-4">
                     <p className=" text-nav-t dark:text-nav-t-dark text-2xl">
                         Ziv Consulting
@@ -34,11 +36,11 @@ export default function Home() {
                 </div>
 
                 <div className="md:hidden flex items-center space-x-4">
-                    <button onClick={() => setMenuOpen(!menuOpen)} >
+                    <button onClick={() => setMenuOpen(!menuOpen)}>
                         {menuOpen ? (
-                            <XIcon className="h-8 w-8 text-nav-t dark:text-nav-t-dark" />
+                            <XIcon className="h-8 w-8 text-nav-t dark:text-nav-t-dark"/>
                         ) : (
-                            <Bars3Icon className="h-8 w-8 text-nav-t dark:text-nav-t-dark" />
+                            <Bars3Icon className="h-8 w-8 text-nav-t dark:text-nav-t-dark"/>
                         )}
                     </button>
                 </div>
@@ -48,7 +50,7 @@ export default function Home() {
                         menuOpen ? "flex" : "hidden"
                     } md:flex md:space-x-4 flex-col md:flex-row items-center font-instru-italic px-4 transition-transform duration-300 ease-in-out`}
                 >
-                    <ThemeToggle setMenuOpen={setMenuOpen} />
+                    <ThemeToggle setMenuOpen={setMenuOpen}/>
 
                     <a
                         href="#about"
@@ -78,17 +80,17 @@ export default function Home() {
             </nav>
 
             <div>
-                <MyHead />
-                <Code />
-                <Tools />
-                <Framework />
-                <Projects />
-                <Experience />
-                <Education />
-                <Award />
-                <Languages />
-                <Form />
-                <Footer />
+                <MyHead/>
+                <Code/>
+                <Tools/>
+                <Framework/>
+                <Projects/>
+                <Experience/>
+                <Education/>
+                <Award/>
+                <Languages/>
+                <Form/>
+                <Footer/>
             </div>
         </div>
     );

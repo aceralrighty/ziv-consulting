@@ -31,7 +31,7 @@ export default function RootLayout({children}) {
             <link rel="icon" href="/favicon.ico"/>
         </Head>
         <body
-            className={`${instru_reg.variable} antialiased bg-global-bg w-full flex justify-center dark:bg-global-bg-dark`}>
+            className={`${instru_reg.variable} antialiased bg-global_bg w-full flex justify-center dark:bg-global_bg_dark`}>
         <header className={`${instru_i.variable} w-96 sm:w-full`}>
             {children}
         </header>

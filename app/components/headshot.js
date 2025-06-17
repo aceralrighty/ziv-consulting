@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import {useState} from "react";
 import HeadshotImg from "/public/headshot.jpg";
 import Image from "next/image";
 
@@ -34,14 +34,14 @@ export default function MyHead() {
     };
 
     const handleMouseMove = (e) => {
-        const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+        const {left, top, width, height} = e.currentTarget.getBoundingClientRect();
         const x = e.clientX - left - width / 2;
         const y = e.clientY - top - height / 2;
         handleInteraction(x, y, width, height);
     };
 
     const handleTouchStart = (e) => {
-        const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
+        const {left, top, width, height} = e.currentTarget.getBoundingClientRect();
         const touch = e.touches[0];
         const x = touch.clientX - left - width / 2;
         const y = touch.clientY - top - height / 2;
@@ -49,7 +49,7 @@ export default function MyHead() {
     };
 
     const handleInteractionEnd = () => {
-        setShadowStyle({ boxShadow: "0 0 25px rgba(0, 0, 0, 0.5)" });
+        setShadowStyle({boxShadow: "0 0 25px rgba(0, 0, 0, 0.5)"});
     };
 
     return (
@@ -67,7 +67,7 @@ export default function MyHead() {
                     alt="headshot"
                     width={320}
                     height={320}
-                    style={{ objectFit: "cover" }}
+                    style={{objectFit: "cover"}}
                     className="rounded-full"
                 />
             </div>

@@ -7,7 +7,8 @@ export default function Footer() {
         <footer className="w-full px-4 sm:px-12 py-2 sm:py-3 mt-16">
             <div className="w-full bg-item-bg dark:bg-item-bg-dark px-6 py-4 rounded-t-lg shadow-md">
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <div className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-1 flex-1">
+                    <div
+                        className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-1 flex-1">
                         <h2 className="text-base sm:text-lg font-bold font-instru-italic text-nav-t-color dark:text-nav-t-color-dark">
                             I hope you had a pleasant visit
                         </h2>

@@ -42,19 +42,20 @@ export default function Experience() {
             <h2 className="font-bold text-4xl font-instru-italic mb-4 text-nav-t dark:text-nav-t-dark">
                 Experience
             </h2>
-            <div className="w-11/12 md:w-2/3 bg-item-bg dark:bg-item-bg-dark p-6 rounded-lg shadow-md text-gray-800 dark:text-body-t-dark">
+            <div
+                className="w-11/12 md:w-2/3 bg-item-bg dark:bg-item-bg-dark p-6 rounded-lg shadow-md text-gray-800 dark:text-body-t-dark">
                 <div className="flex flex-col space-y-8">
                     {experience.slice(0, -1).map((item, index) => (
                         <div key={index} className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm">
                             <p className="text-lg leading-relaxed font-light text-body-t dark:text-body-t-dark">
                                 <strong className="font-bold dark:text-nav-t-dark">{item.title}</strong>
-                                <br />
+                                <br/>
                                 <strong className="font-instru-italic dark:text-nav-t-dark">{item.company}</strong>
-                                <br />
+                                <br/>
                                 <strong className="font-semibold dark:text-body-t-dark">{item.length}</strong>
-                                <br />
+                                <br/>
                                 <strong className="font-serif dark:text-body-t-dark">{item.where}</strong>
-                                <br />
+                                <br/>
                                 <span className="dark:text-body-t-dark">{item.duties}</span>
                             </p>
                         </div>
@@ -66,7 +67,7 @@ export default function Experience() {
                                 alt="Army"
                                 width={256}
                                 height={256}
-                                style={{ objectFit: "cover" }}
+                                style={{objectFit: "cover"}}
                             />
                         </div>
                         <div className="text-left w-full sm:w-auto">
@@ -74,19 +75,19 @@ export default function Experience() {
                                 <strong className="font-bold dark:text-nav-t-dark">
                                     {experience[experience.length - 1].title}
                                 </strong>
-                                <br />
+                                <br/>
                                 <strong className="font-instru-italic dark:text-nav-t-dark">
                                     {experience[experience.length - 1].company}
                                 </strong>
-                                <br />
+                                <br/>
                                 <strong className="font-semibold dark:text-body-t-dark">
                                     {experience[experience.length - 1].length}
                                 </strong>
-                                <br />
+                                <br/>
                                 <strong className="font-serif dark:text-body-t-dark">
                                     {experience[experience.length - 1].where}
                                 </strong>
-                                <br />
+                                <br/>
                                 <span className="dark:text-body-t-dark">
                                     {experience[experience.length - 1].duties}
                                 </span>
