@@ -37,10 +37,10 @@ const projects = [
         link: "https://github.com/aceralrighty/kafkaChat"
     },
     {
-        title: "Calling an API",
-        description: "This project is me getting more comfortable making calls to API's",
-        technologies: "Github, Java, Maven, Spring Boot",
-        link: "https://github.com/aceralrighty/UFCAPI"
+        title: "Exposure to Modular Monolithic Architecture",
+        description: "In this project I set out to learn about creating modules that can be independently developed and tested while still being called in a single application.",
+        technologies: ".NET Framework, EntityFramework, Dapper(ORM), Azure SQL Server(containerized), ML.NET (Machine Learning library), CI Pipeline, Dockerized, Argon2 (award winning password hashing algorithm), Serilog (proper logging)",
+        link: "https://github.com/aceralrighty/UnamedCSharpProject.git"
     },
     {
         title: "Web Scraping(Work In Progress)",
