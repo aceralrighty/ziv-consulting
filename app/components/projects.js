@@ -43,12 +43,6 @@ const projects = [
         link: "https://github.com/aceralrighty/UnamedCSharpProject.git"
     },
     {
-        title: "Web Scraping(Work In Progress)",
-        description: "In this project I use a library i've never used before in order to scrape a website",
-        technologies: "Github, Java, Maven, JSoup",
-        link: "https://github.com/aceralrighty/WebScraper"
-    },
-    {
         title: "My Simple Web Server",
         description: "In this project i'm creating a simple web server that serves a single static web page(not full CRUD)",
         technologies: "Github, Java, Maven, Jackson, JUnit, Lombok",
