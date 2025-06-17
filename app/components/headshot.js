@@ -1,21 +1,24 @@
 "use client";
-import {useState} from "react";
+import { useState } from "react";
 import HeadshotImg from "/public/headshot.jpg";
 import Image from "next/image";
 
 const accomplishments = [
     {
         title: "Problem-solving",
-        description: " I learned to approach complex challenges from multiple angles, finding solutions that aligned with the company's goals."
+        description:
+            " I learned to approach complex challenges from multiple angles, finding solutions that aligned with the company's goals.",
     },
     {
         title: "Collaboration",
-        description: "By working closely with cross-functional teams, I gained experience in communication and teamwork—skills that are vital for working in or eventually leading diverse groups."
+        description:
+            "By working closely with cross-functional teams, I gained experience in communication and teamwork—skills that are vital for working in or eventually leading diverse groups.",
     },
     {
         title: "Adaptability",
-        description: "The fast-paced nature of fintech required me to quickly adjust to new technologies and methods, preparing me for the flexibility needed in future leadership roles."
-    }
+        description:
+            "The fast-paced nature of fintech required me to quickly adjust to new technologies and methods, preparing me for the flexibility needed in future leadership roles.",
+    },
 ];
 
 export default function MyHead() {
@@ -31,14 +34,14 @@ export default function MyHead() {
     };
 
     const handleMouseMove = (e) => {
-        const {left, top, width, height} = e.currentTarget.getBoundingClientRect();
+        const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
         const x = e.clientX - left - width / 2;
         const y = e.clientY - top - height / 2;
         handleInteraction(x, y, width, height);
     };
 
     const handleTouchStart = (e) => {
-        const {left, top, width, height} = e.currentTarget.getBoundingClientRect();
+        const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
         const touch = e.touches[0];
         const x = touch.clientX - left - width / 2;
         const y = touch.clientY - top - height / 2;
@@ -46,7 +49,7 @@ export default function MyHead() {
     };
 
     const handleInteractionEnd = () => {
-        setShadowStyle({boxShadow: "0 0 25px rgba(0, 0, 0, 0.5)"});
+        setShadowStyle({ boxShadow: "0 0 25px rgba(0, 0, 0, 0.5)" });
     };
 
     return (
@@ -64,14 +67,16 @@ export default function MyHead() {
                     alt="headshot"
                     width={320}
                     height={320}
-                    style={{objectFit: "cover"}}
+                    style={{ objectFit: "cover" }}
                     className="rounded-full"
                 />
             </div>
+
             <div
-                className="w-3/4 md:w-1/2 bg-item_bg dark:bg-item_bg_dark p-6 rounded-lg shadow-md text-gray-800 dark:text-body_t_color-dark"
-                id="about">
-                <p className="text-lg leading-relaxed font-light text-left">
+                className="w-3/4 md:w-1/2 bg-item-bg dark:bg-item-bg-dark p-6 rounded-lg shadow-md text-gray-800 dark:text-body-t-color-dark"
+                id="about"
+            >
+                <p className="text-lg leading-relaxed font-light text-left text-body-t-color dark:text-body-t-color-dark">
                     As an emerging software engineer with a solid technical foundation and growing interest in
                     leadership. I am excited to build my career in the technology industry with a long-term goal of
                     taking on management responsibilities. My recent internship at Cambridge Investment Research offered
@@ -92,7 +97,7 @@ export default function MyHead() {
                     ))}
                 </div>
 
-                <p className="text-lg leading-relaxed font-light text-left">
+                <p className="text-lg leading-relaxed font-light text-left text-body-t-color dark:text-body-t-color-dark">
                     This internship deepened my appreciation for how technology is transforming the financial industry,
                     and I am excited to continue developing my skills in both technical and leadership areas, so I can
                     contribute to the growth and innovation of organizations in the future.

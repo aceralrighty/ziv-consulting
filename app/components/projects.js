@@ -22,8 +22,7 @@ const projects = [
         description: "This was my project, with 2 super classes, 6 sub classes, 3 Enums and much more",
         technologies: "Github, Java, Maven",
         link: "https://github.com/aceralrighty/library.git"
-    }
-    ,
+    },
     {
         title: "My Portfolio",
         description: "This is my source code for the website you are currently viewing",
@@ -50,32 +49,29 @@ const projects = [
     },
     {
         title: "Bakery Business Management System(In Progress)",
-        description: "As a backend engineer on this project for my friend's business, i've created a production-grade CRUD system for a real bakery using Spring Boot and Java, with 10+ RESTful APIs for\n" +
-            "inventory, orders, and customers. As well as integrating Stripe payments and Firebase JWT authentication with RBAC, ensuring secure, scalable operations. With push notifications set up through Firebase to update costumers on the status of their orders.",
+        description: "As a backend engineer on this project for my friend's business, i've created a production-grade CRUD system for a real bakery using Spring Boot and Java, with 10+ RESTful APIs for\ninventory, orders, and customers. As well as integrating Stripe payments and Firebase JWT authentication with RBAC, ensuring secure, scalable operations. With push notifications set up through Firebase to update costumers on the status of their orders.",
         technologies: "Self-hosted Git server, Java, Spring Boot, Maven, Lombok, Angular, Firebase, OAuth, JUnit, GSON, TailwindCSS, JWT",
         link: "https://www.bauschbakeries.com"
     }
-
 ];
 
 export default function Projects() {
     return (
-        <div className="flex flex-col items-center mt-16 space-y-8 ">
-            <h2 className="font-bold text-4xl font-instruItalic mb-4 text-nav_t_Color dark:text-nav_t_color-dark">
+        <div className="flex flex-col items-center mt-16 space-y-8">
+            <h2 className="font-bold text-4xl font-instru-italic mb-4 text-nav-t dark:text-nav-t-dark">
                 My Projects
             </h2>
-            <div
-                className="w-3/4 md:w-1/2 bg-item_bg dark:bg-item_bg_dark p-6 rounded-lg shadow-md text-gray-800 dark:text-body_t_color-dark">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 ">
+            <div className="w-11/12 md:w-2/3 bg-item-bg dark:bg-item-bg-dark p-6 rounded-lg shadow-md text-gray-800 dark:text-body-t-dark">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     {projects.map((project, index) => (
                         <div key={index} className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm">
-                            <h3 className="font-bold text-lg mb-2 text-nav_t_Color dark:text-nav_t_color-dark">
+                            <h3 className="font-bold text-lg mb-2 text-nav-t dark:text-nav-t-dark">
                                 {project.title}
                             </h3>
-                            <p className="text-sm font-light mb-2 text-body_t_Color dark:text-body_t_color-dark">
+                            <p className="text-sm font-light mb-2 text-body-t dark:text-body-t-dark">
                                 {project.description}
                             </p>
-                            <p className="text-sm font-semibold mb-2 text-body_t_Color dark:text-body_t_color-dark">
+                            <p className="text-sm font-semibold mb-2 text-body-t dark:text-body-t-dark">
                                 Technologies: {project.technologies}
                             </p>
                             <a

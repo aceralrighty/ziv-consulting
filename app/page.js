@@ -12,7 +12,7 @@ import Footer from "./components/footer";
 import Code from "./components/code_lang";
 import Tools from "./components/tools";
 import Framework from "./components/frameworks";
-import { MenuIcon, XIcon } from "@heroicons/react/solid";
+import { Bars3Icon, XIcon } from "@heroicons/react/24/solid";
 import ThemeToggle from "./components/themeToggle";
 
 export default function Home() {
@@ -21,40 +21,38 @@ export default function Home() {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <div className="bg-global_bg dark:bg-global_bg_dark dark:text-body_t_color-dark text-body_t_Color">
+        <div className="bg-global-bg dark:bg-global-bg-dark dark:text-body-t-dark text-body-t">
             {menuOpen && (
-                <div className="fixed inset-0 bg-global_bg dark:bg-global_bg_dark opacity-95 transition-opacity duration-300 z-10"></div>
+                <div className="fixed inset-0 bg-global-bg dark:bg-global-bg-dark opacity-95 transition-opacity duration-300 z-10"></div>
             )}
 
-            <nav className="sticky top-0 z-20 flex items-center justify-between px-4 mt-4 bg-global_bg dark:bg-global_bg_dark shadow-md">
-                <div className="font-instruItalic px-4">
-                    <p className="text-nav_t_Color dark:text-nav_t_color-dark text-2xl">
+            <nav className="sticky top-0 z-20 flex items-center justify-between px-4 mt-4 bg-global-bg dark:bg-global-bg-dark shadow-md">
+                <div className="font-instru-italic px-4">
+                    <p className=" text-nav-t dark:text-nav-t-dark text-2xl">
                         Ziv Consulting
                     </p>
                 </div>
 
-
                 <div className="md:hidden flex items-center space-x-4">
                     <button onClick={() => setMenuOpen(!menuOpen)} >
                         {menuOpen ? (
-                            <XIcon className="h-8 w-8 text-nav_t_Color dark:text-nav_t_color-dark" />
+                            <XIcon className="h-8 w-8 text-nav-t dark:text-nav-t-dark" />
                         ) : (
-                            <MenuIcon className="h-8 w-8 text-nav_t_Color dark:text-nav_t_color-dark" />
+                            <Bars3Icon className="h-8 w-8 text-nav-t dark:text-nav-t-dark" />
                         )}
                     </button>
                 </div>
 
-
                 <div
                     className={`${
                         menuOpen ? "flex" : "hidden"
-                    } md:flex md:space-x-4 flex-col md:flex-row items-center font-instruItalic px-4 transition-transform duration-300 ease-in-out`}
+                    } md:flex md:space-x-4 flex-col md:flex-row items-center font-instru-italic px-4 transition-transform duration-300 ease-in-out`}
                 >
                     <ThemeToggle setMenuOpen={setMenuOpen} />
 
                     <a
                         href="#about"
-                        className={`mt-2 md:mt-0 text-nav_t_Color dark:text-nav_t_color-dark text-2xl transition-all duration-300 ${
+                        className={`mt-2 md:mt-0 text-nav-t dark:text-nav-t-dark text-2xl transition-all duration-300 ${
                             hovered ? "drop-shadow-lg scale-105" : "scale-100"
                         }`}
                         onMouseEnter={() => setHovered(true)}
@@ -66,7 +64,7 @@ export default function Home() {
 
                     <a
                         href="#contact"
-                        className={`mt-2 md:mt-0 text-nav_t_Color dark:text-nav_t_color-dark text-2xl transition-all duration-300 ${
+                        className={`mt-2 md:mt-0 text-nav-t dark:text-nav-t-dark text-2xl transition-all duration-300 ${
                             hoveredContact ? "drop-shadow-lg scale-105" : "scale-100"
                         }`}
                         onMouseEnter={() => setHoveredContact(true)}
@@ -78,7 +76,6 @@ export default function Home() {
                     </a>
                 </div>
             </nav>
-
 
             <div>
                 <MyHead />

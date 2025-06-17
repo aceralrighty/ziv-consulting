@@ -25,8 +25,8 @@ module.exports = {
         '2xl': "10px 10px 20px rgba(0, 0, 0, 0.25)"
       },
       fontFamily: {
-        instruItalic: ['var(--font-instru-regular)', 'serif'],
-        instruRegular: ['var(--font-instru-italic)', 'serif'],
+        'instru': ['var(--font-instru-regular)', 'serif'],
+        'instru-italic': ['var(--font-instru-italic)', 'serif'],
       },
     },
   },

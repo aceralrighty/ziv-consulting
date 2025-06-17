@@ -1,8 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
-import { SunIcon, MoonIcon } from "@heroicons/react/solid";
+import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
 
-export default function ThemeToggle() {
+export default function ThemeToggle({ setMenuOpen }) {
     const [darkMode, setDarkMode] = useState(false);
 
     useEffect(() => {
@@ -24,8 +24,11 @@ export default function ThemeToggle() {
         <div className="flex items-center">
             {/* Mobile Toggle */}
             <button
-                onClick={() => setDarkMode(!darkMode)}
-                className="block md:hidden text-nav_t_Color dark:text-nav_t_color-dark"
+                onClick={() => {
+                    setDarkMode(!darkMode);
+                    setMenuOpen && setMenuOpen(false);
+                }}
+                className="md:hidden text-nav_t_Color dark:text-nav_t_color-dark"
             >
                 {darkMode ? <SunIcon className="h-6 w-6" /> : <MoonIcon className="h-6 w-6" />}
             </button>

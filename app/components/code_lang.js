@@ -63,10 +63,10 @@ export default function Code() {
 
     return (
         <section className="flex flex-col items-center mt-16 space-y-8">
-            <h2 className="font-bold text-4xl font-instruItalic mb-4 text-nav_t_Color dark:text-nav_t_color-dark">
+            <h2 className="font-bold text-4xl font-instru-italic mb-4 text-nav-t dark:text-nav-t-dark">
                 Languages
             </h2>
-            <div className="w-3/4 md:w-1/2 bg-item_bg dark:bg-item_bg_dark p-6 rounded-lg shadow-md">
+            <div className="w-3/4 md:w-1/2 bg-item-bg dark:bg-item-bg-dark p-6 rounded-lg shadow-md">
                 <Slider {...settings}>
                     {slidesData.map((slide, index) => (
                         <div key={index} className="flex flex-col items-center">
@@ -79,7 +79,7 @@ export default function Code() {
                                 priority
                             />
                             <p
-                                className="text-sm font-medium text-nav_t_Color dark:text-nav_t_color-dark mt-4"
+                                className="text-sm font-medium text-nav-t-color dark:text-nav-t-color-dark mt-4"
                                 style={{marginLeft: "10px"}}
                             >
                                 {slide.name}

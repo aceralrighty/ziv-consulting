@@ -4,11 +4,11 @@ import school from "/public/indian_hills_community_college_logo.jpeg"
 export default function Education() {
     return (
         <div className="flex flex-col items-center mt-16 space-y-8 pb-16">
-            <h2 className="font-bold text-4xl font-instruItalic mb-4 text-nav_t_Color dark:text-nav_t_color-dark">
+            <h2 className="font-bold text-4xl font-instru-italic mb-4 text-nav-t dark:text-nav-t-dark">
                 Education
             </h2>
             <div
-                className="w-3/4 md:w-1/2 bg-item_bg dark:bg-item_bg_dark p-6 rounded-lg shadow-md text-gray-800 dark:text-body_t_color-dark">
+                className="w-3/4 md:w-1/2 bg-item-bg dark:bg-item-bg-dark p-6 rounded-lg shadow-md text-gray-800 dark:text-body-t-color-dark">
                 <div className="flex flex-col space-y-8">
                     <div>
                         <div className="flex items-start space-x-4">
@@ -20,10 +20,10 @@ export default function Education() {
                                 />
                             </div>
                             <div className="text-left">
-                                <p className="text-lg font-bold text-nav_t_Color dark:text-nav_t_color-dark">
+                                <p className="text-lg font-bold text-nav-t-color dark:text-nav-t-color-dark">
                                     Indian Hills Community College
                                 </p>
-                                <p className="text-md font-instruItalic text-gray-600 dark:text-gray-300 mt-2">
+                                <p className="text-md font-instru-italic text-gray-600 dark:text-gray-300 mt-2">
                                     Associate of Applied Science - A.A.S, Computer Software
                                 </p>
                                 <p className="text-sm font-semibold text-gray-500 dark:text-gray-400">

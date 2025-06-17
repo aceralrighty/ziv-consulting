@@ -15,7 +15,7 @@ import sqlite from "/public/icons/SQLite.png";
 import docker from "/public/icons/Docker.png";
 import "../globals.css";
 import Image from "next/image";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
 const toolsData = [
     { icon: py, name: "PyCharm" },
@@ -39,9 +39,9 @@ export default function Tools() {
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 2,
-        autoplay: false, 
-        speed: 3000,
-        autoplaySpeed: 3000,
+        autoplay: false,
+        speed: 2800,
+        autoplaySpeed: 2800,
         cssEase: "linear",
         arrows: false,
         dots: false,
@@ -65,16 +65,15 @@ export default function Tools() {
     });
 
     useEffect(() => {
-        setSettings((prev) => ({ ...prev, autoplay: true })); // Enable autoplay after mount
+        setSettings((prev) => ({ ...prev, autoplay: true }));
     }, []);
-
 
     return (
         <section className="flex flex-col items-center mt-16 space-y-8">
-            <h2 className="font-bold text-4xl font-instruItalic mb-4 text-nav_t_Color dark:text-nav_t_color-dark">
+            <h2 className="font-bold text-4xl font-instru-italic mb-4 text-nav-t dark:text-nav-t-dark">
                 Tools
             </h2>
-            <div className="w-3/4 md:w-1/2 bg-item_bg dark:bg-item_bg_dark p-6 rounded-lg shadow-md">
+            <div className="w-3/4 md:w-1/2 bg-item-bg dark:bg-item-bg-dark p-6 rounded-lg shadow-md">
                 <Slider {...settings}>
                     {toolsData.map((tool, index) => (
                         <div key={index} className="flex flex-col items-center">
@@ -86,7 +85,10 @@ export default function Tools() {
                                 className="dark:filter dark:brightness-75"
                                 priority
                             />
-                            <p className="text-sm font-medium text-nav_t_Color dark:text-nav_t_color-dark mt-4">
+                            <p
+                                className="text-sm font-medium text-nav-t-color dark:text-nav-t-color-dark mt-4"
+                                style={{marginLeft: "10px"}}
+                            >
                                 {tool.name}
                             </p>
                         </div>

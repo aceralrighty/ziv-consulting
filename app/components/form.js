@@ -1,6 +1,6 @@
-"use client"
-import {useState} from "react";
-import {toast} from "react-toastify";
+"use client";
+import { useState } from "react";
+import { toast } from "react-toastify";
 
 export default function Form() {
     const [fullName, setFullName] = useState("");
@@ -12,19 +12,13 @@ export default function Form() {
         e.preventDefault();
         setIsLoading(true);
 
-        const formData = {}
-        Array.from(e.currentTarget.elements).forEach((el) => {
-            if (!el.name) return
-            formData[el.name] = el.value
-        })
-
         try {
             const response = await fetch("/api/contact", {
                 method: "POST",
                 body: JSON.stringify({
                     full_name: fullName,
-                    email: email,
-                    message: message,
+                    email,
+                    message,
                 }),
             });
 
@@ -38,64 +32,77 @@ export default function Form() {
             } else {
                 toast.error("Message failed to send", {
                     position: "bottom-right",
-                })
+                });
             }
         } catch (error) {
             console.error("Error submitting the form:", error);
             toast.error("An unexpected error occurred. Please try again later.", {
                 position: "bottom-right",
             });
-
-
         } finally {
             setIsLoading(false);
         }
     };
 
     return (
-        <div className="flex flex-col items-center mt-16 space-y-8 pb-16" id="contact">
+        <div
+            className="flex flex-col items-center mt-16 space-y-8 pb-16"
+            id="contact"
+        >
             <form
                 onSubmit={handleSubmit}
-                className="w-3/4 md:w-1/2 bg-item_bg dark:bg-item_bg_dark p-8 rounded-lg shadow-md text-gray-800 dark:text-body_t_color-dark"
+                className="w-full max-w-3xl bg-item-bg dark:bg-item-bg-dark p-8 rounded-lg shadow-md text-body-t-color dark:text-body-t-color-dark"
             >
-                <h1 className="text-2xl font-bold mb-6 text-center text-nav_t_Color dark:text-nav_t_color-dark">
+                <h1 className="text-2xl font-bold mb-6 text-center text-nav-t-color dark:text-nav-t-color-dark">
                     Send me an email if you're interested
                 </h1>
 
                 <div className="flex flex-col space-y-4">
-                    <label htmlFor="fullName" className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                    <label
+                        htmlFor="fullName"
+                        className="text-sm font-semibold text-body-t-color dark:text-body-t-color-dark"
+                    >
                         Full Name
                     </label>
                     <input
                         type="text"
                         id="fullName"
+                        name="fullName"
                         placeholder="Enter your full name"
                         value={fullName}
                         onChange={(e) => setFullName(e.target.value)}
-                        className="p-3 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 bg-item_bg dark:bg-global_bg_dark"
+                        className="p-3 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 bg-item-bg dark:bg-global-bg-dark"
                     />
 
-                    <label htmlFor="email" className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                    <label
+                        htmlFor="email"
+                        className="text-sm font-semibold text-body-t-color dark:text-body-t-color-dark"
+                    >
                         Email
                     </label>
                     <input
                         type="email"
                         id="email"
+                        name="email"
                         placeholder="What is your email?"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="p-3 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 bg-item_bg dark:bg-global_bg_dark"
+                        className="p-3 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 bg-item-bg dark:bg-global-bg-dark"
                     />
 
-                    <label htmlFor="message" className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                    <label
+                        htmlFor="message"
+                        className="text-sm font-semibold text-body-t-color dark:text-body-t-color-dark"
+                    >
                         Message
                     </label>
                     <textarea
                         id="message"
+                        name="message"
                         placeholder="What kind of help are you looking for?"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
-                        className="p-3 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none bg-item_bg dark:bg-global_bg_dark"
+                        className="p-3 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none bg-item-bg dark:bg-global-bg-dark"
                         rows="4"
                     />
 

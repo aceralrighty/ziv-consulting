@@ -3,17 +3,17 @@ import React from 'react';
 export default function Awards() {
     return (
         <div className="flex flex-col items-center mt-16 space-y-8 pb-16">
-            <h2 className="font-bold text-4xl font-instruItalic mb-4 text-nav_t_Color dark:text-nav_t_color-dark">
+            <h2 className="font-bold text-4xl font-instru-italic mb-4 text-nav-t dark:text-nav-t-dark">
                 Awards
             </h2>
-            <div className="w-3/4 md:w-1/2 bg-item_bg dark:bg-item_bg_dark p-6 rounded-lg shadow-md text-gray-800 dark:text-body_t_color-dark">
+            <div className="w-3/4 md:w-1/2 bg-item-bg dark:bg-item-bg-dark p-6 rounded-lg shadow-md text-gray-800 dark:text-body-t-color-dark">
                 <div className="flex flex-col space-y-8">
 
                     <div>
-                        <p className="text-lg font-bold text-nav_t_Color dark:text-nav_t_color-dark">
+                        <p className="text-lg font-bold text-nav-t-color dark:text-nav-t-color-dark">
                             Students Choice Winner
                         </p>
-                        <p className="text-md font-instruItalic text-gray-600 dark:text-gray-300">Byte Jam</p>
+                        <p className="text-md font-instru-italic text-gray-600 dark:text-gray-300">Byte Jam</p>
                         <p className="text-sm font-semibold text-gray-500 dark:text-gray-400">
                             Issued by Indian Hills Community College ~ Nov 2024
                         </p>
@@ -35,10 +35,10 @@ export default function Awards() {
                     </div>
 
                     <div>
-                        <p className="text-lg font-bold text-nav_t_Color dark:text-nav_t_color-dark">
+                        <p className="text-lg font-bold text-nav-t-color dark:text-nav-t-color-dark">
                             Honor Roll
                         </p>
-                        <p className="text-md font-instruItalic text-gray-600 dark:text-gray-300">
+                        <p className="text-md font-instru-italic text-gray-600 dark:text-gray-300">
                             Issued by Indian Hills Community College ~ May 2024
                         </p>
                         <p className="text-sm font-semibold text-gray-500 dark:text-gray-400">
@@ -55,7 +55,7 @@ export default function Awards() {
                     </div>
 
                     <div className="text-left">
-                        <h3 className="text-lg font-semibold text-nav_t_Color dark:text-nav_t_color-dark">
+                        <h3 className="text-lg font-semibold text-nav-t-color dark:text-nav-t-color-dark">
                             Other Awards
                         </h3>
                     </div>
