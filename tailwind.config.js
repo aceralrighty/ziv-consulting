@@ -9,14 +9,14 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                nav_t_Color: "#1470AF",
-                'nav-t-color-dark': "#FFFFFF",
-                'body-t-color-dark': "#FFFFFF",
-                body_t_Color: "#26261F",
-                global_bg: "#C6C5B9",
-                'global_bg_dark': "#393D3F",
-                item_bg: "#E0DFD9",
-                "item_bg_dark": '#2A2D2F',
+                'nav-t': '#1470AF',
+                'nav-t-dark': '#FFFFFF',
+                'body-t': '#26261F',
+                'body-t-dark': '#FFFFFF',
+                'global-bg': '#C6C5B9',
+                'global-bg-dark': '#393D3F',
+                'item-bg': '#E0DFD9',
+                'item-bg-dark': '#2A2D2F',
             },
             transformOrigin: {
                 "center": "center",

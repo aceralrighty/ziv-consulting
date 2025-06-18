@@ -12,7 +12,7 @@ import Footer from "./components/footer";
 import Code from "./components/code_lang";
 import Tools from "./components/tools";
 import Framework from "./components/frameworks";
-import {Bars3Icon, XIcon} from "@heroicons/react/24/solid";
+import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/solid";
 import ThemeToggle from "./components/themeToggle";
 
 export default function Home() {
@@ -38,7 +38,7 @@ export default function Home() {
                 <div className="md:hidden flex items-center space-x-4">
                     <button onClick={() => setMenuOpen(!menuOpen)}>
                         {menuOpen ? (
-                            <XIcon className="h-8 w-8 text-nav-t dark:text-nav-t-dark"/>
+                            <XMarkIcon className="h-8 w-8 text-nav-t dark:text-nav-t-dark"/>
                         ) : (
                             <Bars3Icon className="h-8 w-8 text-nav-t dark:text-nav-t-dark"/>
                         )}
@@ -55,6 +55,7 @@ export default function Home() {
                     <a
                         href="#about"
                         className={`mt-2 md:mt-0 text-nav-t dark:text-nav-t-dark text-2xl transition-all duration-300 ${
+    
                             hovered ? "drop-shadow-lg scale-105" : "scale-100"
                         }`}
                         onMouseEnter={() => setHovered(true)}

@@ -61,11 +61,13 @@ export default function Projects() {
             <h2 className="font-bold text-4xl font-instru-italic mb-4 text-nav-t dark:text-nav-t-dark">
                 My Projects
             </h2>
+            {/* Removed hardcoded 'text-gray-800' */}
             <div
-                className="w-11/12 md:w-2/3 bg-item-bg dark:bg-item-bg-dark p-6 rounded-lg shadow-md text-gray-800 dark:text-body-t-dark">
+                className="w-3/4 md:w-1/2 bg-item-bg dark:bg-item-bg-dark p-6 rounded-lg shadow-md text-body-t dark:text-body-t-dark">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     {projects.map((project, index) => (
-                        <div key={index} className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm">
+                        /* Replaced 'bg-white' and 'dark:bg-gray-800' with theme colors */
+                        <div key={index} className="bg-global-bg dark:bg-global-bg-dark p-4 rounded-lg shadow-sm">
                             <h3 className="font-bold text-lg mb-2 text-nav-t dark:text-nav-t-dark">
                                 {project.title}
                             </h3>
@@ -75,9 +77,10 @@ export default function Projects() {
                             <p className="text-sm font-semibold mb-2 text-body-t dark:text-body-t-dark">
                                 Technologies: {project.technologies}
                             </p>
+                            {/* Replaced hardcoded blue colors with theme colors */}
                             <a
                                 href={project.link}
-                                className="text-blue-500 hover:underline dark:text-blue-400"
+                                className="text-nav-t hover:underline dark:text-nav-t-dark"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >

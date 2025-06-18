@@ -1,16 +1,19 @@
 "use client";
-import {useState, useEffect} from "react";
-import {SunIcon, MoonIcon} from "@heroicons/react/24/solid";
+import { useState, useEffect } from "react";
+import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
 
-export default function ThemeToggle({setMenuOpen}) {
+export default function ThemeToggle({ setMenuOpen }) {
     const [darkMode, setDarkMode] = useState(false);
 
     useEffect(() => {
-        const theme = localStorage.getItem("theme");
-        if (theme === "dark") {
+        const storedTheme = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        if (storedTheme === "dark") {
             setDarkMode(true);
-        } else if (!theme) {
-            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        } else if (storedTheme === "light") {
+            setDarkMode(false);
+        } else {
             setDarkMode(prefersDark);
         }
     }, []);
@@ -27,23 +30,14 @@ export default function ThemeToggle({setMenuOpen}) {
 
     return (
         <div className="flex items-center">
-            {/* Mobile Toggle */}
             <button
                 onClick={() => {
                     setDarkMode(!darkMode);
-                    setMenuOpen && setMenuOpen(false);
+                    setMenuOpen?.(false);
                 }}
-                className="md:hidden text-nav-t-color dark:text-nav-t-color-dark"
+                className="text-nav-t dark:text-nav-t-dark"
             >
-                {darkMode ? <SunIcon className="h-6 w-6"/> : <MoonIcon className="h-6 w-6"/>}
-            </button>
-
-            {/* Desktop Toggle */}
-            <button
-                onClick={() => setDarkMode(!darkMode)}
-                className="hidden md:block text-nav_t_Color dark:text-nav_t_color-dark"
-            >
-                {darkMode ? <SunIcon className="h-6 w-6"/> : <MoonIcon className="h-6 w-6"/>}
+                {darkMode ? <SunIcon className="h-6 w-6" /> : <MoonIcon className="h-6 w-6" />}
             </button>
         </div>
     );

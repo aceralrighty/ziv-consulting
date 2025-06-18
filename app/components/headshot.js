@@ -73,7 +73,7 @@ export default function MyHead() {
             </div>
 
             <div
-                className="w-3/4 md:w-1/2 bg-item-bg dark:bg-item-bg-dark p-6 rounded-lg shadow-md text-gray-800 dark:text-body-t-color-dark"
+                className="w-3/4 md:w-1/2 bg-item-bg dark:bg-item-bg-dark p-6 rounded-lg shadow-md text-body-t dark:text-body-t-dark"
                 id="about"
             >
                 <p className="text-lg leading-relaxed font-light text-left text-body-t-color dark:text-body-t-color-dark">

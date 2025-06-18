@@ -51,7 +51,7 @@ export default function Form() {
         >
             <form
                 onSubmit={handleSubmit}
-                className="w-full max-w-3xl bg-item-bg dark:bg-item-bg-dark p-8 rounded-lg shadow-md text-body-t-color dark:text-body-t-color-dark"
+                className="w-full max-w-3xl bg-item-bg dark:bg-item-bg-dark p-8 rounded-lg shadow-md text-body-t dark:text-body-t-dark"
             >
                 <h1 className="text-2xl font-bold mb-6 text-center text-nav-t-color dark:text-nav-t-color-dark">
                     Send me an email if you're interested
@@ -71,7 +71,7 @@ export default function Form() {
                         placeholder="Enter your full name"
                         value={fullName}
                         onChange={(e) => setFullName(e.target.value)}
-                        className="p-3 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 bg-item-bg dark:bg-global-bg-dark"
+                        className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-nav-t bg-global-bg dark:bg-global-bg-dark"
                     />
 
                     <label
@@ -87,7 +87,7 @@ export default function Form() {
                         placeholder="What is your email?"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="p-3 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 bg-item-bg dark:bg-global-bg-dark"
+                        className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-nav-t bg-global-bg dark:bg-global-bg-dark"
                     />
 
                     <label
@@ -102,17 +102,17 @@ export default function Form() {
                         placeholder="What kind of help are you looking for?"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
-                        className="p-3 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none bg-item-bg dark:bg-global-bg-dark"
+                        className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-nav-t resize-none bg-global-bg dark:bg-global-bg-dark"
                         rows="4"
                     />
 
                     <button
                         type="submit"
                         disabled={isLoading}
-                        className={`flex items-center justify-center space-x-2 p-3 mt-6 rounded-md transition-colors duration-300 ${
+                        className={`flex items-center justify-center space-x-2 p-3 mt-6 rounded-md transition-colors duration-300 text-white ${
                             isLoading
                                 ? "bg-gray-400 cursor-not-allowed"
-                                : "bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-500 text-white"
+                                : "bg-nav-t hover:opacity-90"
                         }`}
                     >
                         {isLoading ? (

@@ -7,12 +7,14 @@ export default function Languages() {
                 <div className="flex flex-col space-y-8">
                     <div>
                         <p className="text-lg font-bold">English</p>
-                        <p className="text-md font-instru-italic text-gray-600 dark:text-gray-400">Native or bilingual
+                        {/* Replaced hardcoded gray text */}
+                        <p className="text-md font-instru-italic text-body-t dark:text-body-t-dark">Native or bilingual
                             proficiency</p>
                     </div>
                     <div>
                         <p className="text-lg font-bold">Hebrew</p>
-                        <p className="text-md font-instru-italic text-gray-600 dark:text-gray-400">Native or bilingual
+                        {/* Replaced hardcoded gray text */}
+                        <p className="text-md font-instru-italic text-body-t dark:text-body-t-dark">Native or bilingual
                             proficiency</p>
                     </div>
                 </div>

@@ -77,7 +77,7 @@ export default function Framework() {
                                 priority
                             />
                             <p
-                                className="text-sm font-medium text-nav-t-color dark:text-nav-t-color-dark mt-4"
+                                className="text-sm font-medium text-nav-t dark:text-nav-t-dark mt-4"
                                 style={{marginLeft: "10px"}}
                             >
                                 {framework.name}

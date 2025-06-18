@@ -42,21 +42,24 @@ export default function Experience() {
             <h2 className="font-bold text-4xl font-instru-italic mb-4 text-nav-t dark:text-nav-t-dark">
                 Experience
             </h2>
+            {/* The text color is now inherited and the background uses your theme colors */}
             <div
-                className="w-11/12 md:w-2/3 bg-item-bg dark:bg-item-bg-dark p-6 rounded-lg shadow-md text-gray-800 dark:text-body-t-dark">
+                className="w-11/12 md:w-2/3 bg-item-bg dark:bg-item-bg-dark p-6 rounded-lg shadow-md text-body-t dark:text-body-t-dark">
                 <div className="flex flex-col space-y-8">
                     {experience.slice(0, -1).map((item, index) => (
-                        <div key={index} className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm">
+                        /* Replaced hardcoded 'bg-white' and 'dark:bg-gray-800' with theme colors */
+                        <div key={index} className="bg-global-bg dark:bg-global-bg-dark p-4 rounded-lg shadow-sm">
                             <p className="text-lg leading-relaxed font-light text-body-t dark:text-body-t-dark">
-                                <strong className="font-bold dark:text-nav-t-dark">{item.title}</strong>
+                                {/* Added base classes for light mode to all <strong> and <span> tags */}
+                                <strong className="font-bold text-nav-t dark:text-nav-t-dark">{item.title}</strong>
                                 <br/>
-                                <strong className="font-instru-italic dark:text-nav-t-dark">{item.company}</strong>
+                                <strong className="font-instru-italic text-nav-t dark:text-nav-t-dark">{item.company}</strong>
                                 <br/>
-                                <strong className="font-semibold dark:text-body-t-dark">{item.length}</strong>
+                                <strong className="font-semibold text-body-t dark:text-body-t-dark">{item.length}</strong>
                                 <br/>
-                                <strong className="font-serif dark:text-body-t-dark">{item.where}</strong>
+                                <strong className="font-serif text-body-t dark:text-body-t-dark">{item.where}</strong>
                                 <br/>
-                                <span className="dark:text-body-t-dark">{item.duties}</span>
+                                <span className="text-body-t dark:text-body-t-dark">{item.duties}</span>
                             </p>
                         </div>
                     ))}
@@ -72,23 +75,24 @@ export default function Experience() {
                         </div>
                         <div className="text-left w-full sm:w-auto">
                             <p className="text-lg leading-relaxed font-light text-body-t dark:text-body-t-dark">
-                                <strong className="font-bold dark:text-nav-t-dark">
+                                {/* Added base classes for light mode to all <strong> and <span> tags */}
+                                <strong className="font-bold text-nav-t dark:text-nav-t-dark">
                                     {experience[experience.length - 1].title}
                                 </strong>
                                 <br/>
-                                <strong className="font-instru-italic dark:text-nav-t-dark">
+                                <strong className="font-instru-italic text-nav-t dark:text-nav-t-dark">
                                     {experience[experience.length - 1].company}
                                 </strong>
                                 <br/>
-                                <strong className="font-semibold dark:text-body-t-dark">
+                                <strong className="font-semibold text-body-t dark:text-body-t-dark">
                                     {experience[experience.length - 1].length}
                                 </strong>
                                 <br/>
-                                <strong className="font-serif dark:text-body-t-dark">
+                                <strong className="font-serif text-body-t dark:text-body-t-dark">
                                     {experience[experience.length - 1].where}
                                 </strong>
                                 <br/>
-                                <span className="dark:text-body-t-dark">
+                                <span className="text-body-t dark:text-body-t-dark">
                                     {experience[experience.length - 1].duties}
                                 </span>
                             </p>

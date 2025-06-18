@@ -9,10 +9,10 @@ export default function Footer() {
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div
                         className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-1 flex-1">
-                        <h2 className="text-base sm:text-lg font-bold font-instru-italic text-nav-t-color dark:text-nav-t-color-dark">
+                        <h2 className="text-base sm:text-lg font-bold font-instru-italic text-nav-t dark:text-nav-t-dark">
                             I hope you had a pleasant visit
                         </h2>
-                        <p className="text-xs text-body-t-color dark:text-body-t-color-dark">
+                        <p className="text-xs text-body-t dark:text-body-t-dark">
                             &copy; 2024 Ziv Consulting, LLC. All rights reserved.
                         </p>
                     </div>

@@ -1,14 +1,15 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import Head from "next/head";
-import {ToastContainer} from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Script from "next/script";
 
 const instru_reg = localFont({
     src: "./fonts/InstrumentSerif-Regular.ttf",
     variable: "--font-instru-regular",
     weight: "100 900",
 });
+
 const instru_i = localFont({
     src: "./fonts/InstrumentSerif-Italic.ttf",
     variable: "--font-instru-italic",
@@ -20,21 +21,38 @@ export const metadata = {
     description: "Created by Adam Ziv",
     icons: {
         icon: "/favicon.ico",
-    }
+    },
 };
 
-export default function RootLayout({children}) {
-
+export default function RootLayout({ children }) {
     return (
-        <html lang="en">
-        <Head>
-            <link rel="icon" href="/favicon.ico"/>
-        </Head>
-        <body
-            className={`${instru_reg.variable} antialiased bg-global_bg w-full flex justify-center dark:bg-global_bg_dark`}>
-        <header className={`${instru_i.variable} w-96 sm:w-full`}>
-            {children}
-        </header>
+        <html
+            lang="en"
+            className="bg-global-bg text-body-t dark:bg-global-bg-dark dark:text-body-t-dark"
+            suppressHydrationWarning
+        >
+        <head>
+            <link rel="icon" href="/favicon.ico" />
+            <title>Ziv-Consulting</title>
+        </head>
+        <body className={`${instru_reg.variable} antialiased w-full flex justify-center`}>
+        {/* Theme initialization script MUST be here, before React hydration */}
+        <Script id="theme-init" strategy="beforeInteractive">
+            {`
+            (function () {
+              const storedTheme = localStorage.getItem('theme');
+              const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+              if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+              } else {
+                document.documentElement.classList.remove('dark');
+              }
+            })();
+          `}
+        </Script>
+
+        <header className={`${instru_i.variable} w-96 sm:w-full`}>{children}</header>
+
         <ToastContainer
             position="bottom-right"
             autoClose={5000}
