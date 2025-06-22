@@ -1,17 +1,5 @@
 const projects = [
     {
-        title: "Flash Back",
-        description: "This game was created for Byte Jam 2024 competition. In collaboration with 5 other students",
-        technologies: "Teams, Github, C#, GDScript, Krita",
-        link: "https://github.com/Time-Techies/time_techies_team.git",
-    },
-    {
-        title: "Python Project (Incomplete)",
-        description: "This is incomplete but the majority of work is there",
-        technologies: "Github, Flask, Python, Discord, Jinja2",
-        link: "https://github.com/aceralrighty/python_final.git"
-    },
-    {
         title: "Travel Oasis",
         description: "This project showed me how to built multi class projects in Java, with a super class and sub classes",
         technologies: "Github, Java, Maven",
@@ -40,12 +28,6 @@ const projects = [
         description: "In this project I set out to learn about creating modules that can be independently developed and tested while still being called in a single application.",
         technologies: ".NET Framework, EntityFramework, Dapper(ORM), Azure SQL Server(containerized), ML.NET (Machine Learning library), CI Pipeline, Dockerized, Argon2 (award winning password hashing algorithm), Serilog (proper logging)",
         link: "https://github.com/aceralrighty/UnamedCSharpProject.git"
-    },
-    {
-        title: "My Simple Web Server",
-        description: "In this project i'm creating a simple web server that serves a single static web page(not full CRUD)",
-        technologies: "Github, Java, Maven, Jackson, JUnit, Lombok",
-        link: "https://github.com/aceralrighty/HttpServer"
     },
     {
         title: "Bakery Business Management System(In Progress)",
