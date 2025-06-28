@@ -36,13 +36,19 @@ export default function RootLayout({ children }) {
             <title>Ziv-Consulting</title>
         </head>
         <body className={`${instru_reg.variable} antialiased w-full flex justify-center`}>
-        {/* Theme initialization script MUST be here, before React hydration */}
+        {/* Theme initialization script for Tailwind v4 */}
         <Script id="theme-init" strategy="beforeInteractive">
             {`
             (function () {
               const storedTheme = localStorage.getItem('theme');
               const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-              if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+              const isDark = storedTheme === 'dark' || (!storedTheme && prefersDark);
+              
+              // Set data-theme for Tailwind v4
+              document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+              
+              // Set class for backward compatibility
+              if (isDark) {
                 document.documentElement.classList.add('dark');
               } else {
                 document.documentElement.classList.remove('dark');
