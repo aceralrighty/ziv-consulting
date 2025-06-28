@@ -6,6 +6,7 @@ updates:
       interval: "weekly"
       day: "monday"
       time: "09:00"
+      timezone: "America/New_York"
     open-pull-requests-limit: 10
     reviewers:
       - "aceralrighty"
@@ -13,19 +14,114 @@ updates:
       - "aceralrighty"
     commit-message:
       prefix: "deps"
+      prefix-development: "deps-dev"
       include: "scope"
+    labels:
+      - "dependencies"
+      - "automated"
+    milestone: null
+    allow:
+      - dependency-type: "direct"
+      - dependency-type: "indirect"
+    ignore:
+      # Ignore major version updates for core frameworks to avoid breaking changes
+      - dependency-name: "next"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "react"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "react-dom"
+        update-types: ["version-update:semver-major"]
+      # Ignore Tailwind major updates since you're on v4 beta
+      - dependency-name: "tailwindcss"
+        update-types: ["version-update:semver-major"]
     groups:
-      production-deps:
+      # Group React ecosystem updates
+      react-ecosystem:
         patterns:
-          - "next"
           - "react"
           - "react-dom"
+          - "next"
+        update-types:
+          - "minor"
+          - "patch"
+
+      # Group database and ORM updates
+      database:
+        patterns:
           - "@prisma/client"
-      dev-deps:
+          - "prisma"
+          - "@planetscale/database"
+          - "sqlite3"
+        update-types:
+          - "minor"
+          - "patch"
+
+      # Group UI and styling updates
+      ui-styling:
+        patterns:
+          - "tailwindcss"
+          - "@tailwindcss/*"
+          - "@heroicons/react"
+          - "heroicons"
+        update-types:
+          - "minor"
+          - "patch"
+
+      # Group email and notification services
+      notifications:
+        patterns:
+          - "@sendgrid/mail"
+          - "resend"
+          - "react-toastify"
+          - "react-hot-toast"
+        update-types:
+          - "minor"
+          - "patch"
+
+      # Group development dependencies
+      dev-dependencies:
         patterns:
           - "@types/*"
           - "eslint*"
           - "typescript"
+          - "autoprefixer"
+          - "postcss"
+          - "@cloudflare/next-on-pages"
+        update-types:
+          - "minor"
+          - "patch"
+        dependency-type: "development"
+
+      # Group security updates (these should be prioritized)
+      security-updates:
+        patterns:
+          - "*"
+        update-types:
+          - "security"
+
+  # Add GitHub Actions workflow dependency updates
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "10:00"
+      timezone: "America/New_York"
+    open-pull-requests-limit: 5
+    reviewers:
+      - "aceralrighty"
+    assignees:
+      - "aceralrighty"
+    commit-message:
+      prefix: "ci"
+      include: "scope"
+    labels:
+      - "github-actions"
+      - "dependencies"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
         update-types:
           - "minor"
           - "patch"
