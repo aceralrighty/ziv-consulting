@@ -3,6 +3,14 @@ import Image from "next/image";
 
 const experience = [
     {
+        title: "Full-Stack Engineer Intern",
+        company: "Hydra Communications",
+        length: "Feb 2025 - Current",
+        where: "Remote | Iowa",
+        duties: "At Hydra Communications, I'm architecting a production-ready, enterprise-grade CRUD system for a real bakery client, leveraging Spring Boot and Java to build robust, HTTPS-secured RESTful APIs that handle critical business operations including inventory management, order processing, and customer data. My development workflow encompasses comprehensive testing strategies—from unit and integration testing to full API validation—ensuring bulletproof system reliability. To enhance customer engagement, I developed real-time web push notifications using Firebase Cloud Messaging (FCM), delivering instant updates on exclusive deals and order status changes directly to customers' devices.\n" +
+            "Working within our proprietary, self-hosted Version Control System, I manage product backlogs and prioritize backlog items (PBIs) in an agile environment that thrives on autonomy and innovation. The culture here is refreshingly collaborative—I'm empowered to dive deep into problem-solving, explore creative solutions independently, and engage in strategic discussions with the team to align technical implementation with the evolving vision. Nothing is set in stone, which means every day brings new opportunities to innovate and make meaningful impact."
+    },
+    {
         title: "Software Developer Intern",
         company: "Cambridge Investment Research",
         length: "May 2024 - August 2024",
@@ -53,9 +61,11 @@ export default function Experience() {
                                 {/* Added base classes for light mode to all <strong> and <span> tags */}
                                 <strong className="font-bold text-nav-t dark:text-nav-t-dark">{item.title}</strong>
                                 <br/>
-                                <strong className="font-instru-italic text-nav-t dark:text-nav-t-dark">{item.company}</strong>
+                                <strong
+                                    className="font-instru-italic text-nav-t dark:text-nav-t-dark">{item.company}</strong>
                                 <br/>
-                                <strong className="font-semibold text-body-t dark:text-body-t-dark">{item.length}</strong>
+                                <strong
+                                    className="font-semibold text-body-t dark:text-body-t-dark">{item.length}</strong>
                                 <br/>
                                 <strong className="font-serif text-body-t dark:text-body-t-dark">{item.where}</strong>
                                 <br/>

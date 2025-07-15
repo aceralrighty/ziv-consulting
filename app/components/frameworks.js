@@ -9,8 +9,9 @@ import tailwind from "/public/icons/tailwind.png";
 import jquery from "/public/icons/jquery.png";
 import kafka from "/public/icons/Apache Kafka.png";
 import Slider from "react-slick";
+
 import Image from "next/image";
-import {useEffect, useState} from "react";
+import {useEffect, useState, useMemo} from "react";
 
 const frameworksData = [
     {icon: react, name: "React"},
@@ -22,23 +23,31 @@ const frameworksData = [
     {icon: sqlalchemy, name: "SQLAlchemy"},
     {icon: tailwind, name: "Tailwind CSS"},
     {icon: jquery, name: "JQuery"},
-    {icon: kafka, name: "Apache Kafka"},
+    {icon: kafka, name: "Apache Kafka"}
 ];
 
 export default function Framework() {
+    // Duplicate the array multiple times for better infinite scrolling
+    const duplicatedFrameworks = useMemo(() => {
+        return [...frameworksData, ...frameworksData, ...frameworksData];
+    }, []);
+
     const [settings, setSettings] = useState({
         infinite: true,
         slidesToShow: 3,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
         autoplay: false,
-        speed: 2800,
-        autoplaySpeed: 2800,
+        speed: 2000, // Smooth transition speed
+        autoplaySpeed: 1000, // Faster autoplay
         cssEase: "linear",
         arrows: false,
         dots: false,
         pauseOnHover: false,
         pauseOnFocus: false,
         swipe: false,
+        variableWidth: false,
+        centerMode: false,
+        lazyLoad: 'ondemand', // Improve performance
         responsive: [
             {
                 breakpoint: 768,
@@ -64,22 +73,21 @@ export default function Framework() {
             <h2 className="font-bold text-4xl font-instru-italic mb-4 text-nav-t dark:text-nav-t-dark">
                 Frameworks
             </h2>
-            <div className="w-3/4 md:w-1/2 bg-item-bg dark:bg-item-bg-dark p-6 rounded-lg shadow-md">
+            <div className="w-3/4 md:w-1/2 bg-item-bg dark:bg-item-bg-dark p-6 rounded-lg shadow-md overflow-hidden">
                 <Slider {...settings}>
-                    {frameworksData.map((framework, index) => (
-                        <div key={index} className="flex flex-col items-center">
-                            <Image
-                                src={framework.icon}
-                                alt={framework.name}
-                                width={50}
-                                height={50}
-                                className="dark:filter dark:brightness-75"
-                                priority
-                            />
-                            <p
-                                className="text-sm font-medium text-nav-t dark:text-nav-t-dark mt-4"
-                                style={{marginLeft: "10px"}}
-                            >
+                    {duplicatedFrameworks.map((framework, index) => (
+                        <div key={`${framework.name}-${index}`} className="flex flex-col items-center px-4">
+                            <div className="flex flex-col items-center justify-center h-20">
+                                <Image
+                                    src={framework.icon}
+                                    alt={framework.name}
+                                    width={50}
+                                    height={50}
+                                    className="dark:filter dark:brightness-75"
+                                    priority
+                                />
+                            </div>
+                            <p className="text-sm font-medium text-nav-t dark:text-nav-t-dark mt-2 text-center">
                                 {framework.name}
                             </p>
                         </div>

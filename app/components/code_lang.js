@@ -11,7 +11,7 @@ import php from "/public/icons/PHP.png";
 import cobol from "/public/icons/cobol-language-svgrepo-com.png";
 import "../globals.css";
 import Image from "next/image";
-import {useEffect, useState} from "react";
+import {useEffect, useState, useMemo} from "react";
 
 // Data for slides
 const slidesData = [
@@ -28,19 +28,27 @@ const slidesData = [
 ];
 
 export default function Code() {
+    // Duplicate the array multiple times for better infinite scrolling
+    const duplicatedSlides = useMemo(() => {
+        return [...slidesData, ...slidesData, ...slidesData];
+    }, []);
+
     const [settings, setSettings] = useState({
         infinite: true,
         slidesToShow: 3,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
         autoplay: false,
-        speed: 2800,
-        autoplaySpeed: 2800,
+        speed: 2000, // Smooth transition speed
+        autoplaySpeed: 1000, // Faster autoplay
         cssEase: "linear",
         arrows: false,
         dots: false,
         pauseOnHover: false,
         pauseOnFocus: false,
         swipe: false,
+        variableWidth: false,
+        centerMode: false,
+        lazyLoad: 'ondemand', // Improve performance
         responsive: [
             {
                 breakpoint: 768,
@@ -66,23 +74,21 @@ export default function Code() {
             <h2 className="font-bold text-4xl font-instru-italic mb-4 text-nav-t dark:text-nav-t-dark">
                 Languages
             </h2>
-            <div className="w-3/4 md:w-1/2 bg-item-bg dark:bg-item-bg-dark p-6 rounded-lg shadow-md">
+            <div className="w-3/4 md:w-1/2 bg-item-bg dark:bg-item-bg-dark p-6 rounded-lg shadow-md overflow-hidden">
                 <Slider {...settings}>
-                    {slidesData.map((slide, index) => (
-                        <div key={index} className="flex flex-col items-center">
-                            <Image
-                                src={slide.icon}
-                                alt={slide.name}
-                                width={50}
-                                height={50}
-                                className="dark:filter dark:brightness-75"
-                                priority
-                            />
-                            {/* Corrected text color classes */}
-                            <p
-                                className="text-sm font-medium text-nav-t dark:text-nav-t-dark mt-4"
-                                style={{marginLeft: "10px"}}
-                            >
+                    {duplicatedSlides.map((slide, index) => (
+                        <div key={`${slide.name}-${index}`} className="flex flex-col items-center px-4">
+                            <div className="flex flex-col items-center justify-center h-20">
+                                <Image
+                                    src={slide.icon}
+                                    alt={slide.name}
+                                    width={50}
+                                    height={50}
+                                    className="dark:filter dark:brightness-75"
+                                    priority
+                                />
+                            </div>
+                            <p className="text-sm font-medium text-nav-t dark:text-nav-t-dark mt-2 text-center">
                                 {slide.name}
                             </p>
                         </div>
@@ -90,6 +96,5 @@ export default function Code() {
                 </Slider>
             </div>
         </section>
-
     );
 }

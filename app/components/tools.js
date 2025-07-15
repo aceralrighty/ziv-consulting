@@ -13,9 +13,14 @@ import webstorm from "/public/icons/WebStorm.png";
 import mysql from "/public/icons/MySQL.png";
 import sqlite from "/public/icons/SQLite.png";
 import docker from "/public/icons/Docker.png";
+import zsh from "/public/icons/Oh_my_zsh.png"
+import Prometheus from "/public/icons/Prometheus.png"
+import Grafana from "/public/icons/Grafana.png"
+import SQLServer from "/public/icons/Microsoft SQL Server.png"
+import firebase from "/public/icons/firebase.png"
 import "../globals.css";
 import Image from "next/image";
-import {useEffect, useState} from "react";
+import {useEffect, useState, useMemo} from "react";
 
 const toolsData = [
     {icon: py, name: "PyCharm"},
@@ -32,22 +37,36 @@ const toolsData = [
     {icon: mysql, name: "MySQL"},
     {icon: ado, name: "Azure DevOps"},
     {icon: aws, name: "AWS"},
+    {icon: zsh, name: "Oh my zsh"},
+    {icon: Prometheus, name: "Prometheus"},
+    {icon: Grafana, name: "Grafana"},
+    {icon: SQLServer, name: "SQL Server"},
+    {icon: firebase, name: "Firebase"}
+
 ];
 
 export default function Tools() {
+    // Duplicate the array multiple times for better infinite scrolling
+    const duplicatedTools = useMemo(() => {
+        return [...toolsData, ...toolsData, ...toolsData];
+    }, []);
+
     const [settings, setSettings] = useState({
         infinite: true,
         slidesToShow: 3,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
         autoplay: false,
-        speed: 2800,
-        autoplaySpeed: 2800,
+        speed: 2000, // Smooth transition speed
+        autoplaySpeed: 1000, // Faster autoplay
         cssEase: "linear",
         arrows: false,
         dots: false,
         pauseOnHover: false,
         pauseOnFocus: false,
         swipe: false,
+        variableWidth: false,
+        centerMode: false,
+        lazyLoad: 'ondemand', // Improve performance
         responsive: [
             {
                 breakpoint: 768,
@@ -73,22 +92,21 @@ export default function Tools() {
             <h2 className="font-bold text-4xl font-instru-italic mb-4 text-nav-t dark:text-nav-t-dark">
                 Tools
             </h2>
-            <div className="w-3/4 md:w-1/2 bg-item-bg dark:bg-item-bg-dark p-6 rounded-lg shadow-md">
+            <div className="w-3/4 md:w-1/2 bg-item-bg dark:bg-item-bg-dark p-6 rounded-lg shadow-md overflow-hidden">
                 <Slider {...settings}>
-                    {toolsData.map((tool, index) => (
-                        <div key={index} className="flex flex-col items-center">
-                            <Image
-                                src={tool.icon}
-                                alt={tool.name}
-                                width={50}
-                                height={50}
-                                className="dark:filter dark:brightness-75"
-                                priority
-                            />
-                            <p
-                                className="text-sm font-medium text-nav-t dark:text-nav-t-dark mt-4"
-                                style={{marginLeft: "10px"}}
-                            >
+                    {duplicatedTools.map((tool, index) => (
+                        <div key={`${tool.name}-${index}`} className="flex flex-col items-center px-4">
+                            <div className="flex flex-col items-center justify-center h-20">
+                                <Image
+                                    src={tool.icon}
+                                    alt={tool.name}
+                                    width={50}
+                                    height={50}
+                                    className="dark:filter dark:brightness-75"
+                                    priority
+                                />
+                            </div>
+                            <p className="text-sm font-medium text-nav-t dark:text-nav-t-dark mt-2 text-center">
                                 {tool.name}
                             </p>
                         </div>

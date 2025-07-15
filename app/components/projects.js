@@ -25,15 +25,9 @@ const projects = [
     },
     {
         title: "Exposure to Modular Monolithic Architecture",
-        description: "In this project I set out to learn about creating modules that can be independently developed and tested while still being called in a single application.",
-        technologies: ".NET Framework, EntityFramework, Dapper(ORM), Azure SQL Server(containerized), ML.NET (Machine Learning library), CI Pipeline, Dockerized, Argon2 (award winning password hashing algorithm), Serilog (proper logging)",
+        description: "This is a comprehensive .NET 9.0 learning project built as a modular monolith with 8 independent modules (Auth, User, Address, Schedule, Service, Recommendation, StockPrediction, and Metrics), each having its own DbContext, repositories, and services. The standout feature is an advanced ML.NET stock prediction system that processes 619,040 records with 97.78% R² accuracy and 2.5% average prediction error, alongside a complete monitoring stack using Prometheus, Grafana, and OpenTelemetry. The architecture emphasizes enterprise-level patterns including generic repositories, comprehensive caching, extensive testing, and real-time metrics tracking across all modules. It's designed to demonstrate modern .NET development practices while providing a foundation for eventual microservices migration.",
+        technologies: ".NET Framework, EntityFramework, Dapper(ORM), Azure SQL Server(containerized), ML.NET (Machine Learning library), CI Pipeline, Dockerized, Argon2 (award winning password hashing algorithm), Serilog, Prometheus, Grafana",
         link: "https://github.com/aceralrighty/UnamedCSharpProject.git"
-    },
-    {
-        title: "Bakery Business Management System(In Progress)",
-        description: "As a backend engineer on this project for my friend's business, i've created a production-grade CRUD system for a real bakery using Spring Boot and Java, with 10+ RESTful APIs for\ninventory, orders, and customers. As well as integrating Stripe payments and Firebase JWT authentication with RBAC, ensuring secure, scalable operations. With push notifications set up through Firebase to update costumers on the status of their orders.",
-        technologies: "Self-hosted Git server, Java, Spring Boot, Maven, Lombok, Angular, Firebase, OAuth, JUnit, GSON, TailwindCSS, JWT",
-        link: "https://www.bauschbakeries.com"
     }
 ];
 
