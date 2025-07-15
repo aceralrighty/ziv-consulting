@@ -17,7 +17,7 @@ import zsh from "/public/icons/Oh_my_zsh.png"
 import Prometheus from "/public/icons/Prometheus.png"
 import Grafana from "/public/icons/Grafana.png"
 import SQLServer from "/public/icons/Microsoft SQL Server.png"
-import firebase from "/public/icons/firebase.png"
+import firebase from "/public/icons/Firebase.png"
 import "../globals.css";
 import Image from "next/image";
 import {useEffect, useState, useMemo} from "react";
