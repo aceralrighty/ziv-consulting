@@ -1,23 +1,23 @@
 "use client";
-import {useState} from "react";
+import { useState } from "react";
 import HeadshotImg from "/public/headshot.jpg";
 import Image from "next/image";
 
-const accomplishments = [
+const accomplishmentsUpdated = [
     {
         title: "Problem-solving",
         description:
-            " I learned to approach complex challenges from multiple angles, finding solutions that aligned with the company's goals.",
+            "I tackle challenges by digging deep and finding practical solutions that actually work in real projects.",
     },
     {
         title: "Collaboration",
         description:
-            "By working closely with cross-functional teams, I gained experience in communication and teamwork—skills that are vital for working in or eventually leading diverse groups.",
+            "Working closely with teammates is where I thrive, sharing ideas, reviewing code, and building better software together.",
     },
     {
         title: "Adaptability",
         description:
-            "The fast-paced nature of fintech required me to quickly adjust to new technologies and methods, preparing me for the flexibility needed in future leadership roles.",
+            "I pick up new tech quickly and adjust to changing requirements without losing focus or momentum.",
     },
 ];
 
@@ -34,14 +34,14 @@ export default function MyHead() {
     };
 
     const handleMouseMove = (e) => {
-        const {left, top, width, height} = e.currentTarget.getBoundingClientRect();
+        const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
         const x = e.clientX - left - width / 2;
         const y = e.clientY - top - height / 2;
         handleInteraction(x, y, width, height);
     };
 
     const handleTouchStart = (e) => {
-        const {left, top, width, height} = e.currentTarget.getBoundingClientRect();
+        const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
         const touch = e.touches[0];
         const x = touch.clientX - left - width / 2;
         const y = touch.clientY - top - height / 2;
@@ -49,7 +49,7 @@ export default function MyHead() {
     };
 
     const handleInteractionEnd = () => {
-        setShadowStyle({boxShadow: "0 0 25px rgba(0, 0, 0, 0.5)"});
+        setShadowStyle({ boxShadow: "0 0 25px rgba(0, 0, 0, 0.5)" });
     };
 
     return (
@@ -67,7 +67,7 @@ export default function MyHead() {
                     alt="headshot"
                     width={320}
                     height={320}
-                    style={{objectFit: "cover"}}
+                    style={{ objectFit: "cover" }}
                     className="rounded-full"
                 />
             </div>
@@ -77,31 +77,29 @@ export default function MyHead() {
                 id="about"
             >
                 <p className="text-lg leading-relaxed font-light text-left text-body-t-color dark:text-body-t-color-dark">
-                    As an emerging software engineer with a solid technical foundation and growing interest in
-                    leadership. I am excited to build my career in the technology industry with a long-term goal of
-                    taking on management responsibilities. My recent internship at Cambridge Investment Research offered
-                    valuable insights into the intersection of finance and technology, strengthening my belief in my
-                    ability to contribute meaningfully to future employers' success.
-
-                    During my internship, I had the opportunity to work on a fully functional payment processing portal
-                    that clients could use for transactions. This hands-on experience not only sharpened my technical
-                    skills but also gave me a glimpse into the importance of developing soft skills, such as:
+                    I’m a software engineer who loves building real, solid systems, from scalable backend APIs and modular
+                    .NET monoliths to React frontends and cloud-powered projects. I’m comfortable jumping between Java,
+                    C#, Python, and JavaScript, and I’m always digging into new tech to solve problems smarter and faster.
+                </p>
+                <p className="text-lg leading-relaxed font-light text-left text-body-t-color dark:text-body-t-color-dark mt-4">
+                    I’ve worked on payment platforms, bakery order systems, and even thrown some machine learning into production
+                    pipelines, yep, ML.NET with real data. I’m big on clean code, automation, and making sure everything I build
+                    can actually run in the real world, with Docker, CI/CD, monitoring included.
+                </p>
+                <p className="text-lg leading-relaxed font-light text-left text-body-t-color dark:text-body-t-color-dark mt-4">
+                    I’m aiming to keep growing not just technically, but as someone who can help guide teams and projects in the
+                    future. Collaboration and learning from others is how I get better every day, and I’m excited to bring that
+                    energy wherever I land next.
                 </p>
 
-                <div className="flex flex-col items-center space-y-4 my-4">
-                    {accomplishments.map((item, index) => (
+                <div className="flex flex-col items-center space-y-4 my-6">
+                    {accomplishmentsUpdated.map((item, index) => (
                         <div key={index} className="text-center text-lg font-light">
                             <strong className="block font-bold">{item.title}</strong>
                             <span className="block text-left">{item.description}</span>
                         </div>
                     ))}
                 </div>
-
-                <p className="text-lg leading-relaxed font-light text-left text-body-t-color dark:text-body-t-color-dark">
-                    This internship deepened my appreciation for how technology is transforming the financial industry,
-                    and I am excited to continue developing my skills in both technical and leadership areas, so I can
-                    contribute to the growth and innovation of organizations in the future.
-                </p>
             </div>
         </div>
     );
