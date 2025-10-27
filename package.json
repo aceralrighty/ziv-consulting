@@ -26,7 +26,7 @@
     "semver": "^7.6.3",
     "slick-carousel": "^1.8.1",
     "sqlite3": "^5.1.7",
-    "sharp": "^0.30.4"
+    "sharp": "^0.34.4"
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.13.16",
