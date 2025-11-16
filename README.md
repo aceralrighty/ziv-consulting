@@ -1,6 +1,6 @@
 # Quint Portfolio Site
 
-Welcome to my Quint Portfolio Site! 👋
+Welcome to my Quaint Portfolio Site! 👋
 
 This website serves as a showcase for my projects as I embark on my journey as a software engineer. My goal is to provide potential employers and clients with insight into what I'm capable of.
 
