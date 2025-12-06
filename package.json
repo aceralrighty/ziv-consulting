@@ -15,7 +15,7 @@
     "@prisma/client": "^6.13.0",
     "@sendgrid/mail": "^8.1.4",
     "heroicons": "^2.1.5",
-    "next": "15.4.7",
+    "next": "16.0.7",
     "path-to-regexp": "^8.2.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
@@ -24,9 +24,9 @@
     "react-toastify": "11.0.0",
     "resend": "^6.0.2",
     "semver": "^7.6.3",
+    "sharp": "^0.34.5",
     "slick-carousel": "^1.8.1",
-    "sqlite3": "^5.1.7",
-    "sharp": "^0.30.4"
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
     "@cloudflare/next-on-pages": "^1.13.16",
