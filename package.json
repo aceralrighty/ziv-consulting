@@ -12,10 +12,10 @@
   "dependencies": {
     "@heroicons/react": "2.2.0",
     "@planetscale/database": "^1.19.0",
-    "@prisma/client": "5.21.1",
+    "@prisma/client": "7.1.0",
     "@sendgrid/mail": "^8.1.4",
     "heroicons": "^2.1.5",
-    "next": "15.5.7",
+    "next": "16.0.7",
     "path-to-regexp": "^8.2.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
