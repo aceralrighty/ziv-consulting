@@ -1,23 +1,23 @@
 import Slider from "react-slick";
-import py from "/public/icons/pycharm.png";
-import oracle from "/public/icons/oracle_apex.png";
-import visual_studio from "/public/icons/visual_studio.png";
-import vscode from "/public/icons/Visual Studio Code (VS Code).png";
-import intellij from "/public/icons/intellij-idea.512x512.png";
-import xcode from "/public/icons/Xcode.png";
-import github from "/public/icons/GitHub.png";
-import aws from "/public/icons/AWS.png";
-import ado from "/public/icons/Azure Devops.png";
-import rider from "/public/icons/Rider.png";
-import webstorm from "/public/icons/WebStorm.png";
-import mysql from "/public/icons/MySQL.png";
-import sqlite from "/public/icons/SQLite.png";
-import docker from "/public/icons/Docker.png";
-import zsh from "/public/icons/Oh_my_zsh.png"
-import Prometheus from "/public/icons/Prometheus.png"
-import Grafana from "/public/icons/Grafana.png"
-import SQLServer from "/public/icons/Microsoft SQL Server.png"
-import firebase from "/public/icons/Firebase.png"
+import py from "../../public/icons/pycharm.png";
+import oracle from "../../public/icons/oracle_apex.png";
+import visual_studio from "../../public/icons/visual_studio.png";
+import vscode from "../../public/icons/Visual Studio Code (VS Code).png";
+import intellij from "../../public/icons/intellij-idea.512x512.png";
+import xcode from "../../public/icons/Xcode.png";
+import github from "../../public/icons/GitHub.png";
+import aws from "../../public/icons/AWS.png";
+import ado from "../../public/icons/Azure Devops.png";
+import rider from "../../public/icons/Rider.png";
+import webstorm from "../../public/icons/WebStorm.png";
+import mysql from "../../public/icons/MySQL.png";
+import sqlite from "../../public/icons/SQLite.png";
+import docker from "../../public/icons/Docker.png";
+import zsh from "../../public/icons/Oh_my_zsh.png"
+import Prometheus from "../../public/icons/Prometheus.png"
+import Grafana from "../../public/icons/Grafana.png"
+import SQLServer from "../../public/icons/Microsoft SQL Server.png"
+import firebase from "../../public/icons/Firebase.png"
 import "../globals.css";
 import Image from "next/image";
 import {useEffect, useState, useMemo} from "react";

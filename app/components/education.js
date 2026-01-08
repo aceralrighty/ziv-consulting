@@ -1,5 +1,5 @@
 import Image from "next/image";
-import school from "/public/indian_hills_community_college_logo.jpeg"
+import school from "../../public/indian_hills_community_college_logo.jpeg"
 
 export default function Education() {
     return (
@@ -13,7 +13,7 @@ export default function Education() {
                 <div className="flex flex-col space-y-8">
                     <div>
                         <div className="flex items-start space-x-4">
-                            <div className="hidden md:block w-20 h-20 md:w-24 md:h-24 overflow-hidden flex-shrink-0">
+                            <div className="hidden md:block w-20 h-20 md:w-24 md:h-24 overflow-hidden shrink-0">
                                 <Image
                                     src={school}
                                     alt="school logo"

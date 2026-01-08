@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Instagram from "/public/icons/instagram.svg";
-import LinkedIn from "/public/icons/LinkedIn.svg";
+import Instagram from "../../public/icons/instagram.svg";
+import LinkedIn from "../../public/icons/LinkedIn.svg";
 
 export default function Footer() {
     return (
