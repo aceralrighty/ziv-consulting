@@ -9,7 +9,7 @@ const experience = [
         duties: "I am currently building new products within the wealth management department while maintaining legacy systems and providing 24/7 support for system outages. I also actively participate in backlog grooming and sprint planning, collaborating across functional teams through daily stand-ups."
     },
     {
-        title: "Full Stack Software Engineer",
+        title: "Full-Stack Software Engineer",
         company: "CodeWorks LLC",
         length: "August 2025 - December 2025",
         where: "Remote | Iowa",

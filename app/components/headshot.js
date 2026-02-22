@@ -5,19 +5,19 @@ import Image from "next/image";
 
 const accomplishmentsUpdated = [
     {
-        title: "Problem-solving",
+        title: "Problem-Solving",
         description:
-            "I tackle challenges by digging deep and finding practical solutions that actually work in real projects.",
+            "I dive into complex systems, optimize performance, and deliver practical solutions that hold up under real production demands.",
     },
     {
         title: "Collaboration",
         description:
-            "Working closely with teammates is where I thrive, sharing ideas, reviewing code, and building better software together.",
+            "I work closely with engineers and stakeholders across domains, sharing ideas, reviewing code, and building stronger systems together.",
     },
     {
         title: "Adaptability",
         description:
-            "I pick up new tech quickly and adjust to changing requirements without losing focus or momentum.",
+            "I learn new technologies quickly and adjust to evolving requirements without sacrificing quality, clarity, or delivery momentum.",
     },
 ];
 
@@ -77,19 +77,15 @@ export default function MyHead() {
                 id="about"
             >
                 <p className="text-lg leading-relaxed font-light text-left text-body-t-color dark:text-body-t-color-dark">
-                    I’m a software engineer who loves building real, solid systems, from scalable backend APIs and modular
-                    .NET monoliths to React frontends and cloud-powered projects. I’m comfortable jumping between Java,
-                    C#, Python, and JavaScript, and I’m always digging into new tech to solve problems smarter and faster.
+                    I’m a full-stack software engineer focused on building scalable backend APIs, modular .NET systems, and clean React frontends that ship confidently to production. I work across C#, Java, Python, and JavaScript, designing secure, maintainable applications backed by Docker, CI/CD pipelines, and monitoring.
                 </p>
+
                 <p className="text-lg leading-relaxed font-light text-left text-body-t-color dark:text-body-t-color-dark mt-4">
-                    I’ve worked on payment platforms, bakery order systems, and even thrown some machine learning into production
-                    pipelines, yep, ML.NET with real data. I’m big on clean code, automation, and making sure everything I build
-                    can actually run in the real world, with Docker, CI/CD, monitoring included.
+                    From payment platforms to event-driven order systems and ML.NET pipelines running on real data, I care about performance, reliability, and clean architecture. I build systems that are fast, resilient, and designed to scale.
                 </p>
+
                 <p className="text-lg leading-relaxed font-light text-left text-body-t-color dark:text-body-t-color-dark mt-4">
-                    I’m aiming to keep growing not just technically, but as someone who can help guide teams and projects in the
-                    future. Collaboration and learning from others is how I get better every day, and I’m excited to bring that
-                    energy wherever I land next.
+                    I’m continuing to grow not just technically, but in ownership and leadership, helping guide systems and teams toward thoughtful, well-engineered solutions.
                 </p>
 
                 <div className="flex flex-col items-center space-y-4 my-6">
